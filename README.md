@@ -8,7 +8,9 @@ Hen hann aldrig göra den tillgänglig, och hann heller aldrig få den att funge
 
 En tillgänglighetsgranskning har gjorts och resultatet ligger som tickets längre ner. **Er uppgift är att beta av dem.** Ni rör inte designen — mobillayouten ska se likadan ut när ni är klara.
 
-Appen är modellerad på en riktig reseplanerare, men trafikbolaget är påhittat.
+Appen är en kopia av en riktig reseplanerares startsida, med utbytt logotyp och påhittat trafikbolag. Bilderna är platshållare.
+
+Desktopvyn är inte byggd alls. Den finns som **[designskiss](img/designskiss-desktop.png)** och ska byggas enligt den.
 
 ---
 
@@ -44,91 +46,97 @@ Prioritet: **Blockerande** måste vara klar, **Hög** ska hinnas med, **Medel** 
 
 ### A11Y-1 · Formuläret är inget formulär — Blockerande
 
-Sökrutan består av fyra `input` som ligger löst i en `div`. Det finns inget `<form>`, och inget fält har en `label`. Placeholder-texten är enda ledtråden om vad fältet vill ha, och den försvinner så fort man börjar skriva.
+Sökrutan består av fyra `input` som ligger löst i en `div`. Det finns inget `<form>`. "Från", "Till", "Datum" och "Tid" ser ut som etiketter men är `<div class="etikett">` — de är alltså inte kopplade till något fält.
 
-**Klart när:** fälten ligger i ett `<form>`, varje fält har en synlig `<label>` kopplad med `for`/`id`, och ingen placeholder används som enda etikett.
+**Klart när:** fälten ligger i ett `<form>` och varje fält har en riktig `<label>` kopplad med `for`/`id`. Utseendet ska inte ändras.
 
-### A11Y-2 · Knappar och flikar är `div`-ar — Blockerande
+### A11Y-2 · Allt klickbart är `div`-ar — Blockerande
 
-"Sök resa", växla-knappen och de tre flikarna är alla `div`. De går inte att nå med Tab och en skärmläsare vet inte att de går att trycka på. Formuläret går alltså inte att skicka utan mus.
+"Sök resa", växlaknappen, de två flikarna, "Sök" och "Meny" i toppen samt alla fyra genvägar är `div`. Inget av det går att nå med Tab. Hela sidan har **fyra fokuserbara element** — de fyra inputfälten. Formuläret går inte att skicka utan mus.
 
-**Klart när:** allt som går att trycka på är `<button>` eller `<a>`, hela sidan går att använda med enbart tangentbord, och den valda fliken är utpekad i koden och inte bara med färg.
+**Klart när:** knappar är `<button>`, genvägar och menyval är `<a>`, hela sidan går att använda med enbart tangentbord, och den valda fliken är utpekad i koden och inte bara med färg.
 
 ### A11Y-3 · Fokusmarkeringen är bortsläckt — Blockerande
 
-`outline: none` ligger på `.input:focus`. Den som tabbar ser inte var hen är.
+`outline: none` ligger på `.input:focus`.
 
-**Klart när:** alla fokuserbara element har en tydligt synlig fokusmarkering. Använd `:focus-visible`. Webbläsarens egen duger, en snyggare egen är bättre — men den ska synas mot både vit och blå bakgrund.
+**Klart när:** alla fokuserbara element har synlig fokusmarkering via `:focus-visible`. Den ska synas mot både vit, ljusgrå och blå bakgrund.
 
 ### A11Y-4 · Felmeddelandet är en röd remsa utan text — Hög
 
-`.fel` är en tre pixlar hög röd list som visas när något gått fel. Den säger inte vad som är fel, och en skärmläsare märker inte att den dykt upp.
+`.fel` är tre pixlar hög och röd. Den säger inte vad som är fel och en skärmläsare märker inte att den dykt upp.
 
-**Klart när:** felet har en text som säger vad som är fel och hur man rättar det, signaleras med mer än bara färg, och aviseras till skärmläsare med `role="alert"`.
+**Klart när:** felet har text som säger vad som är fel och hur man rättar det, signaleras med mer än färg, och aviseras med `role="alert"`.
 
-### A11Y-5 · Fel `type` på datum och tid — Hög
+### A11Y-5 · Fel `type` på fälten — Hög
 
-Alla fyra fälten är `type="text"`. Telefonen ger då fullt tangentbord i stället för datum- respektive tidväljare.
+Alla fyra fälten är `type="text"`. Telefonen ger fullt tangentbord i stället för datum- och tidväljare.
 
 **Klart när:** datum- och tidfälten har rätt `type`, och från/till-fälten har vettig `autocomplete`.
 
 ### A11Y-6 · Sidan saknar rubriker och landmärken — Hög
 
-Det finns ingen `h1` på sidan, faktiskt ingen rubrik alls. "Nästa avgångar från Slussen" är en `div` som ser ut som en rubrik. Hela sidan är `div` — ingen `header`, `nav`, `main` eller `footer`.
+Det finns **noll** rubriker på sidan. "Vart vill du åka?" och "Trafikläget just nu" är `div`-ar som bara är stora och feta. Det finns heller ingen `header`, `nav`, `main` eller `footer`.
 
 **Klart när:** sidan har en `h1`, rubriknivåerna följer strukturen utan hopp, och de fyra landmärkena finns.
 
-### A11Y-7 · Kontrast under AA på tre ställen — Hög
+### A11Y-7 · Kontrast under kraven på tre ställen — Hög
 
 Uppmätt med WCAG-formeln:
 
 | Var | Färger | Uppmätt | Krav |
 |---|---|---|---|
-| Placeholder i sökfälten | `#9a9a9a` på `#f7f9fa` | **2,66:1** | 4,5:1 |
+| "Uppdaterad idag 13:26" | `#9a9a9a` på `#ffffff` | **2,81:1** | 4,5:1 |
 | Länkarna i sidfoten | `#9a9a9a` på `#ffffff` | **2,81:1** | 4,5:1 |
 | Ramen runt sökfälten | `#d8dde2` på `#ffffff` | **1,37:1** | 3:1 |
 
-Resten av paletten klarar AA — mät innan ni ändrar något annat.
+Resten av paletten klarar kraven, inklusive vit text på den blå (4,67:1). Mät innan ni ändrar något annat — den blå ligger nära gränsen och tål inte att göras ljusare.
 
 **Klart när:** de tre klarar sina krav och ingen annan färg har blivit sämre. Skriv de uppmätta värdena i PR-beskrivningen.
 
-### A11Y-8 · Avvikelser markeras bara med färg — Medel
+### A11Y-8 · Störningsläget syns bara som en färgad prick — Hög
 
-Två avgångar har en färgad prick: röd för inställd, gul för försenad. Den som inte skiljer rött från gult får ingen information alls.
+Varje linje i "Trafikläget just nu" har en prick: grön för inga störningar, orange för stora, grå för måttliga. Det finns ingen text alls. Den som inte skiljer färgerna åt får ingen information.
 
-**Klart när:** avvikelsen framgår av text också, inte bara av färgen.
+**Klart när:** störningsläget framgår av text bredvid symbolen, som i designskissen. Färgen får finnas kvar som förstärkning.
 
-### A11Y-9 · Fel språk i `<html>` — Låg
+### A11Y-9 · Bilderna saknar `alt` — Medel
 
-Sidan är på svenska men `lang="en"`. Skärmläsaren läser då svenska ord med engelskt uttal.
+Logotypen och hero-bilden är `<img>` helt utan `alt`-attribut. De är olika fall: den ena är dekoration, den andra bär ett namn.
+
+**Klart när:** båda har ett `alt` som stämmer med vad bilden gör på sidan.
+
+### A11Y-10 · Fel språk i `<html>` — Låg
+
+Sidan är på svenska men `lang="en"`.
 
 **Klart när:** `lang="sv"`.
 
-### RWD-1 · Appen skalar inte upp — Hög
+### RWD-1 · Desktopvyn finns inte — Hög
 
-`.app` har `max-width: 430px` och det finns inte en enda media query. På en surfplatta eller laptop blir det en smal remsa mitt på skärmen.
+Det finns inte en enda media query. På en laptop ligger allt kvar i mobilbredd.
 
-**Klart när:** layouten utnyttjar ytan på större skärmar. Mobilvyn ska vara **oförändrad** — bygg vidare mobile first och lägg till uppåt. Välj brytpunkterna efter när innehållet ser illa ut, inte efter enhetsmodeller, och motivera dem i PR:en.
+Bygg desktopvyn enligt **[designskissen](img/designskiss-desktop.png)**. Noterna längst ner i skissen säger vad som ändras: toppfältet tillkommer, menyn blir utskriven, Från och Till hamnar bredvid varandra med växlaknappen emellan, och Trafikläget blir två kolumner.
+
+**Klart när:** desktopvyn följer skissen, **mobilvyn är oförändrad**, och ni har motiverat era brytpunkter i PR:en. Skissen visar 1280 px — mellanläget bestämmer ni själva.
 
 ### RWD-2 · Allt är satt i `px` — Hög
 
-Den som ställer upp textstorleken i webbläsaren får ingen skillnad alls. WCAG kräver att text går att förstora till 200 % utan att innehåll försvinner.
+Den som ställer upp textstorleken i webbläsaren får ingen skillnad. WCAG kräver att text går att förstora till 200 % utan att innehåll försvinner.
 
-**Klart när:** text och avstånd är i `rem`, och sidan fungerar med webbläsarens teckenstorlek på 200 % utan att något överlappar eller klipps.
+**Klart när:** text och avstånd är i `rem`, och sidan fungerar vid 200 % utan att något överlappar eller klipps.
 
 ### RWD-3 · Flikraden kapas vid 320 px — Medel
 
-Vid 320 px bredd, som en iPhone SE, klipps fliken "Trafikläget" av i högerkanten. WCAG 1.4.10 kräver att innehåll går att läsa vid 320 px utan sidledsscroll.
+Vid 320 px, som en iPhone SE, slutar fliken "Sök avgångar" vid 348 px. Den går alltså inte att läsa. WCAG 1.4.10 kräver att innehåll fungerar vid 320 px utan sidledsscroll.
 
 **Klart när:** inget klipps eller kräver sidledsscroll vid 320 px.
 
-### RWD-4 · Träffytan på växla-knappen är för liten — Medel
+### RWD-4 · Träffytan på växlaknappen är för liten — Medel
 
-Knappen som byter plats på Från och Till är 22×22 px. WCAG 2.2 kräver minst 24×24 px (SC 2.5.8, nivå AA). 44×44 är praxis för något man trycker på i farten med tummen.
+Knappen som byter plats på Från och Till är 22×22 px. WCAG 2.2 kräver minst 24×24 px (SC 2.5.8, nivå AA). Designskissen visar 44 px på desktop, vilket är praxis för något man trycker på med tummen.
 
-**Klart när:** träffytan är minst 24×24 px, gärna större. Den får se likadan ut — det är ytan som ska växa, inte cirkeln.
-
----
+**Klart när:** träffytan är minst 24×24 px. Den får se likadan ut — det är ytan som ska växa, inte cirkeln.
 
 ## Skicka in
 

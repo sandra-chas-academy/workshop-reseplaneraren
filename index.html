@@ -8,77 +8,104 @@
 </head>
 <body>
 
-    <div class="app">
-
-        <div class="topp">
-            <div class="logo"></div>
-            <div class="titel">Stadstrafiken</div>
-            <div class="profil"></div>
+    <div class="topbar">
+        <div class="topbar-sok">
+            <span class="ikon-sok"></span>
+            <span>Sök</span>
         </div>
+        <img src="img/logo.svg" class="logo">
+        <div class="topbar-meny">
+            <span>Meny</span>
+            <span class="ikon-meny"></span>
+        </div>
+    </div>
 
+    <div class="hero">
+        <img src="img/hero.svg" class="hero-bild">
         <div class="flikar">
-            <div class="flik aktiv">Reseplanerare</div>
-            <div class="flik">Avgångar</div>
-            <div class="flik">Trafikläget</div>
+            <div class="flik aktiv">Sök resa</div>
+            <div class="flik">Sök avgångar</div>
+        </div>
+    </div>
+
+    <div class="sokpanel">
+        <div class="sokrubrik">Vart vill du åka?</div>
+
+        <div class="falt">
+            <div class="etikett">Från</div>
+            <input type="text" class="input">
         </div>
 
-        <div class="sokkort">
+        <div class="vaxla">⇅</div>
+
+        <div class="falt">
+            <div class="etikett">Till</div>
+            <input type="text" class="input">
+        </div>
+
+        <div class="falt-rad">
             <div class="falt">
-                <input type="text" class="input" placeholder="Från">
+                <div class="etikett">Datum</div>
+                <input type="text" class="input">
             </div>
-
-            <div class="vaxla">⇅</div>
-
             <div class="falt">
-                <input type="text" class="input" placeholder="Till">
-            </div>
-
-            <div class="falt-rad">
-                <input type="text" class="input" placeholder="Datum">
-                <input type="text" class="input" placeholder="Tid">
-            </div>
-
-            <div class="fel"></div>
-
-            <div class="knapp">Sök resa</div>
-        </div>
-
-        <div class="avgangar">
-            <div class="avgangar-rubrik">Nästa avgångar från Slussen</div>
-
-            <div class="avgang">
-                <div class="linje buss">4</div>
-                <div class="mal">Radiohuset</div>
-                <div class="tid">2 min</div>
-                <div class="prick rod"></div>
-            </div>
-
-            <div class="avgang">
-                <div class="linje tunnelbana">13</div>
-                <div class="mal">Ropsten</div>
-                <div class="tid">4 min</div>
-            </div>
-
-            <div class="avgang">
-                <div class="linje pendel">41</div>
-                <div class="mal">Södertälje centrum</div>
-                <div class="tid">7 min</div>
-                <div class="prick gul"></div>
-            </div>
-
-            <div class="avgang">
-                <div class="linje buss">76</div>
-                <div class="mal">Ropsten</div>
-                <div class="tid">11 min</div>
+                <div class="etikett">Tid</div>
+                <input type="text" class="input">
             </div>
         </div>
 
-        <div class="fot">
-            <div class="fot-lank">Köp biljett</div>
-            <div class="fot-lank">Mina resor</div>
-            <div class="fot-lank">Hjälp</div>
-        </div>
+        <div class="fel"></div>
 
+        <div class="knapp">Sök resa</div>
+    </div>
+
+    <div class="genvagar">
+        <div class="genvag">Reseplanering<span class="pil">→</span></div>
+        <div class="genvag">Biljetter<span class="pil">→</span></div>
+        <div class="genvag">Kundservice<span class="pil">→</span></div>
+        <div class="genvag">Aktuellt<span class="pil">→</span></div>
+    </div>
+
+    <div class="trafik">
+        <div class="trafikrubrik">Trafikläget just nu</div>
+        <div class="uppdaterad">Uppdaterad idag 13:26</div>
+
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Blå linjen</span>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Röda linjen</span>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Gröna linjen</span>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon pendel"></span>
+            <span class="linjenamn">Pendeltåg</span>
+            <span class="status varning"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon sparvagn"></span>
+            <span class="linjenamn">Spårvagn och lokalbana</span>
+            <span class="status info"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon buss"></span>
+            <span class="linjenamn">Buss</span>
+            <span class="status info"></span>
+        </div>
+    </div>
+
+    <div class="fot">
+        <div class="fot-lank">Om Stadstrafiken</div>
+        <div class="fot-lank">Kontakta oss</div>
+        <div class="fot-lank">Tillgänglighet</div>
     </div>
 
 </body>
