@@ -50,11 +50,15 @@ Sökrutan består av fyra `input` som ligger löst i en `div`. Det finns inget `
 
 **Klart när:** fälten ligger i ett `<form>` och varje fält har en riktig `<label>` kopplad med `for`/`id`. Utseendet ska inte ändras.
 
-### A11Y-2 · Allt klickbart är `div`-ar — Blockerande
+### A11Y-2 · Knappar, flikar och länkar är `div`-ar — Blockerande
 
-"Sök resa", växlaknappen, de två flikarna, "Sök" och "Meny" i toppen samt alla fyra genvägar är `div`. Inget av det går att nå med Tab. Hela sidan har **fyra fokuserbara element** — de fyra inputfälten. Formuläret går inte att skicka utan mus.
+Tretton saker på sidan ser klickbara ut: "Sök" och "Meny" i toppen, de två flikarna, växlaknappen, "Sök resa", de fyra genvägarna och de tre länkarna i sidfoten. Alla är `div` med `cursor: pointer`.
 
-**Klart när:** knappar är `<button>`, genvägar och menyval är `<a>`, hela sidan går att använda med enbart tangentbord, och den valda fliken är utpekad i koden och inte bara med färg.
+Sidan har **fyra fokuserbara element** — de fyra inputfälten. Inget av de tretton går att nå med Tab, skärmläsaren säger varken "knapp" eller "länk", och Enter gör ingenting. Formuläret går alltså inte att skicka utan mus.
+
+Det finns ingen JavaScript på sidan. Ni ska byta ut elementen, inte bygga funktionalitet.
+
+**Klart när:** det som utför något är `<button>`, det som leder någonstans är `<a href>`, alla tretton går att nå med Tab i logisk ordning, och den valda fliken är utpekad i koden och inte bara med färg.
 
 ### A11Y-3 · Fokusmarkeringen är bortsläckt — Blockerande
 
