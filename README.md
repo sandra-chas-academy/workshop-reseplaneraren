@@ -132,7 +132,7 @@ Den som ställer upp textstorleken i webbläsaren får ingen skillnad. WCAG krä
 
 ### RWD-3 · Flikraden kapas vid 320 px — Medel
 
-Vid 320 px, som en iPhone SE, slutar fliken "Sök avgångar" vid 348 px. Den går alltså inte att läsa. WCAG 1.4.10 kräver att innehåll fungerar vid 320 px utan sidledsscroll.
+Vid 320 px bredd slutar fliken "Sök avgångar" vid 348 px. Den går alltså inte att läsa. WCAG 1.4.10 kräver att innehåll fungerar vid 320 px utan sidledsscroll. 320 px är vad 1280 px blir vid 400 % zoom — kravet handlar om förstoring, inte om telefonmodeller.
 
 **Klart när:** inget klipps eller kräver sidledsscroll vid 320 px.
 
@@ -146,7 +146,14 @@ Mät själva i DevTools innan ni ändrar — resten av sidan klarar kravet, så 
 
 ## 📤 Skicka in
 
-1. Kör igenom er egen checklista innan ni pushar: tangentbord, 320 px, 200 % textstorlek, Lighthouse, [validator.w3.org](https://validator.w3.org/).
+1. **Testa själva innan ni pushar.** Granskande grupp kommer att köra exakt de här fem, så gör dem först:
+
+   - **Tangentbord.** Lägg undan musen och tabba igenom hela sidan uppifrån och ner. Når ni allt? Ser ni hela tiden var fokus ligger? Går formuläret att skicka?
+   - **320 px bredd.** Dra ihop fönstret. Ingenting får klippas och det får inte gå att scrolla i sidled. Siffran kommer inte från telefoner — den är 1280 px vid 400 % zoom, alltså vad någon med nedsatt syn ser på sin laptop.
+   - **200 % textstorlek.** I Firefox: Inställningar → Zooma endast text, sedan Cmd/Ctrl och plus tills det står 200 %. Texten ska växa utan att något överlappar eller försvinner. Använd inte Chrome till det här testet — dess zoom förstorar hela sidan, även `px`, och döljer felet.
+   - **Lighthouse.** DevTools → Lighthouse → Accessibility. Notera poängen, den ska med i PR:en.
+   - **Validatorn.** [validator.w3.org](https://validator.w3.org/), noll fel.
+
 2. Pusha branchen: `git push -u origin fix/grupp-N`
 3. Öppna en **Pull Request mot `dev`** på GitHub.
 4. Fyll i PR-mallen. Kryssa bara i de tickets ni faktiskt gjort — en ärlig PR är lättare att granska än en komplett.

@@ -31,7 +31,7 @@ git switch fix/grupp-N
 |---|---|
 | Tangentbord | Lägg undan musen. Tabba igenom hela sidan. Kommer ni åt allt? Syns fokus hela tiden? Går formuläret att skicka? |
 | 320 px | Dra ihop fönstret. Klipps något? Finns sidledsscroll? |
-| 200 % text | Ställ upp webbläsarens teckenstorlek. Växer texten? Överlappar något? |
+| 200 % text | Firefox: Inställningar → Zooma endast text, sedan Cmd/Ctrl och plus till 200 %. Växer texten? Överlappar något? Chrome duger inte — dess zoom förstorar även `px` och döljer felet. |
 | Uppåt | Dra ut fönstret brett. Ser det avslutat ut? Är mobilvyn oförändrad? |
 | Lighthouse | Kör Accessibility. Notera poängen. |
 
