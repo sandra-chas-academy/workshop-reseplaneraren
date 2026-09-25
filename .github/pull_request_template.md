@@ -15,7 +15,7 @@ Kryssa bara i det ni faktiskt gjort.
 - [ ] RWD-1 Desktopvyn finns inte
 - [ ] RWD-2 Allt är satt i px
 - [ ] RWD-3 Flikraden kapas vid 320 px
-- [ ] RWD-4 För liten träffyta på växlaknappen
+- [ ] RWD-4 För små träffytor i toppen
 
 ## Så här löste vi det
 

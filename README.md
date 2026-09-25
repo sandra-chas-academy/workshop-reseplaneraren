@@ -132,11 +132,13 @@ Vid 320 px, som en iPhone SE, slutar fliken "Sök avgångar" vid 348 px. Den gå
 
 **Klart när:** inget klipps eller kräver sidledsscroll vid 320 px.
 
-### RWD-4 · Träffytan på växlaknappen är för liten — Medel
+### RWD-4 · För små träffytor i toppen — Medel
 
-Knappen som byter plats på Från och Till är 22×22 px. WCAG 2.2 kräver minst 24×24 px (SC 2.5.8, nivå AA). Designskissen visar 44 px på desktop, vilket är praxis för något man trycker på med tummen.
+"Sök" och "Meny" i den blå toppen är bara **22 px höga**. WCAG 2.2 kräver minst 24×24 px (SC 2.5.8, nivå AA), och 44×44 är praxis för något man trycker på i farten med tummen.
 
-**Klart när:** träffytan är minst 24×24 px. Den får se likadan ut — det är ytan som ska växa, inte cirkeln.
+Mät själva i DevTools innan ni ändrar — resten av sidan klarar kravet, så ändra inte på måfå.
+
+**Klart när:** båda träffytorna är minst 24×24 px, gärna 44. Toppraden ska se likadan ut — det är ytan som växer, inte texten eller ikonerna.
 
 ## Skicka in
 
