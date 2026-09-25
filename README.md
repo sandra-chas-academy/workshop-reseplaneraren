@@ -1,6 +1,6 @@
-# Stadstrafiken — reseplanerare (mobil)
+# 🚇 Stadstrafiken — reseplanerare (mobil)
 
-## Läget
+## 🚧 Läget
 
 Vi har tagit över den här appen från en utvecklare som slutade. Mobillayouten är faktiskt **gjord och den sitter bra** — den ser ut som den ska på en telefon. Problemet är allt annat.
 
@@ -14,7 +14,7 @@ Desktopvyn är inte byggd alls. Den finns som **[designskiss](img/designskiss-de
 
 ---
 
-## Kom igång
+## 🚀 Kom igång
 
 ```bash
 git clone <repo-url>
@@ -40,7 +40,7 @@ Det gör granskningen mycket lättare för gruppen som får er PR.
 
 ---
 
-## Tickets
+## 🎫 Tickets
 
 Prioritet: **Blockerande** måste vara klar, **Hög** ska hinnas med, **Medel** om ni får tid.
 
@@ -144,12 +144,11 @@ Mät själva i DevTools innan ni ändrar — resten av sidan klarar kravet, så 
 
 **Klart när:** båda träffytorna är minst 24×24 px, gärna 44. Toppraden ska se likadan ut — det är ytan som växer, inte texten eller ikonerna.
 
-## Skicka in
+## 📤 Skicka in
 
 1. Kör igenom er egen checklista innan ni pushar: tangentbord, 320 px, 200 % textstorlek, Lighthouse, [validator.w3.org](https://validator.w3.org/).
 2. Pusha branchen: `git push -u origin fix/grupp-N`
 3. Öppna en **Pull Request mot `dev`** på GitHub.
-   GitHub föreslår `main` som bas i rullgardinen — **byt den till `dev`**, annars pekar PR:en fel.
 4. Fyll i PR-mallen. Kryssa bara i de tickets ni faktiskt gjort — en ärlig PR är lättare att granska än en komplett.
 5. Skriv in PR-länken i kanalen.
 
