@@ -130,7 +130,7 @@ body {
 .vaxla {
     width: 22px;
     height: 22px;
-    margin: 0 0 10px auto;
+    margin: 0 auto 10px;
     border-radius: 50%;
     background-color: #007bb5;
     color: #ffffff;
