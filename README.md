@@ -1,8 +1,8 @@
-# 🚇 Stadstrafiken — reseplanerare (mobil)
+# 🚇 Stadstrafiken — Reseplanerare 
 
 ## 🚧 Läget
 
-Vi har tagit över den här appen från en utvecklare som slutade. Mobillayouten är faktiskt **gjord och den sitter bra** — den ser ut som den ska på en telefon. Problemet är allt annat.
+Vi har tagit över den här appen från en utvecklare som skulle jobba remote i Thailand men som inte dykt upp på några daily stand-ups. Mobillayouten är faktiskt **gjord och den sitter bra** — den ser ut som den ska på en telefon. Problemet är allt annat.
 
 Hen hann aldrig göra den tillgänglig, och hann heller aldrig få den att fungera på något större än en telefon. Arbetet ligger kvar på branchen `dev`.
 
