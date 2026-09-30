@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #12151a;
+    background-color: #ffffff;
+}
+
+/* --- Topbar --- */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bb5;
+    color: #ffffff;
+    padding: 14px 16px;
+}
+
+.topbar-sok,
+.topbar-meny {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ikon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+}
+
+/* --- Hero --- */
+
+.hero {
+    position: relative;
+    background-color: #0e1620;
+}
+
+.hero-bild {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.flikar {
+    display: flex;
+    padding: 0 16px;
+    margin-top: -48px;
+    position: relative;
+}
+
+.flik {
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #007bb5;
+    color: #ffffff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.flik.aktiv {
+    background-color: #f1f2f3;
+    color: #12151a;
+    text-decoration: underline;
+}
+
+/* --- Sökpanel --- */
+
+.sokpanel {
+    background-color: #f1f2f3;
+    padding: 20px 16px 24px;
+}
+
+.sokrubrik {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.falt {
+    margin-bottom: 12px;
+}
+
+.etikett {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 13px 12px;
+    border: 1px solid #d8dde2;
+    background-color: #ffffff;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #007bb5;
+}
+
+.falt-rad {
+    display: flex;
+    gap: 12px;
+}
+
+.falt-rad .falt {
+    flex: 1 1 0;
+}
+
+.vaxla {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background-color: #007bb5;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fel {
+    display: none;
+    height: 3px;
+    background-color: #c62828;
+    margin-bottom: 12px;
+}
+
+.knapp {
+    background-color: #007bb5;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px;
+    cursor: pointer;
+}
+
+/* --- Genvägar --- */
+
+.genvagar {
+    margin: 20px 16px;
+    border: 1px solid #e4e6e8;
+}
+
+.genvag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #e4e6e8;
+    cursor: pointer;
+}
+
+.genvag:last-child {
+    border-bottom: 0;
+}
+
+.pil {
+    color: #007bb5;
+    font-size: 18px;
+}
+
+/* --- Trafikläget --- */
+
+.trafik {
+    padding: 8px 16px 24px;
+}
+
+.trafikrubrik {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.uppdaterad {
+    font-size: 14px;
+    color: #9a9a9a;
+    margin-bottom: 14px;
+}
+
+.linjekort {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f1f2f3;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+
+.linjeikon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    border-radius: 4px;
+}
+
+.tunnelbana { background-color: #12151a; }
+.pendel     { background-color: #007a5e; }
+.sparvagn   { background-color: #6a3f9e; }
+.buss       { background-color: #c8102e; }
+
+.linjenamn {
+    flex: 1 1 auto;
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    border-radius: 50%;
+}
+
+.status.ok      { background-color: #1b7a3d; }
+.status.varning { background-color: #c77700; }
+.status.info    { background-color: #4c5157; }
+
+/* --- Fot --- */
+
+.fot {
+    border-top: 1px solid #e4e6e8;
+    padding: 16px;
+}
+
+.fot-lank {
+    font-size: 14px;
+    color: #9a9a9a;
+    padding: 8px 0;
+    cursor: pointer;
+}
