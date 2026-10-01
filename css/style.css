@@ -350,66 +350,87 @@ body {
     display: none;
   }
 
-  /* Flikar centrerade */
-  .flikar {
-    justify-content: center;
-  }
+  .hero {
+    padding: 2rem 3rem;
+    background-image: url(/img/tunnelbana-stockholm-1-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 
-  /* Sökpanelen */
-  .sokpanel {
-    padding: 3rem;
-  }
+    .hero-bild {
+      opacity: 0;
+    }
 
-  /* Från och Till bredvid varandra */
-  .falt-rad-fran-till {
-    display: flex;
-    align-items: flex-end;
-    gap: 1.2rem;
-  }
+    /* Flikar centrerade */
+    .flikar {
+      justify-content: center;
+      margin-top: 3.2rem;
+    }
 
-  .falt-rad-fran-till .falt {
-    flex: 1;
-  }
+    /* Sökpanelen */
+    .sokpanel {
+      padding: 3rem;
+    }
 
-  /* Växlaknappen mellan Från och Till */
-  .falt-rad-fran-till .vaxla {
-    flex: 0 0 36px;
-    margin: 0 0 1.2rem;
-    transform: rotate(90deg);
-  }
+    /* Från och Till bredvid varandra */
+    .falt-rad-fran-till {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.2rem;
+    }
 
-  /* Datum, Tid och Sök resa på samma rad */
-  .desktop-sokrad {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
+    .falt-rad-fran-till .falt {
+      flex: 1;
+    }
 
-  /* Datum och Tid */
-  .falt-rad {
-    display: flex;
-    gap: 1.2rem;
-  }
+    /* Växlaknappen mellan Från och Till */
+    .falt-rad-fran-till .vaxla {
+      flex: 0 0 36px;
+      margin: 0 0 1.2rem;
+      transform: rotate(90deg);
+    }
 
-  /* Kortare rutor för Datum och Tid */
-  .falt-rad .falt {
-    width: 180px;
-  }
+    /* Datum, Tid och Sök resa på samma rad */
+    .desktop-sokrad {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
 
-  /* Sök resa längst till höger */
-  .knapp {
-    margin-left: auto;
-  }
+    /* Datum och Tid */
+    .falt-rad {
+      display: flex;
+      gap: 1.2rem;
+    }
 
-  /* Trafikläget i två kolumner */
-  .trafik {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.6rem;
-  }
+    /* Kortare rutor för Datum och Tid */
+    .falt-rad .falt {
+      width: 180px;
+    }
 
-  .trafikrubrik,
-  .uppdaterad {
-    grid-column: 1 / -1;
+    /* Sök resa längst till höger */
+    .knapp {
+      margin-left: auto;
+    }
+
+    /* Trafikläget i två kolumner */
+    .trafik {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.6rem;
+    }
+  
+    .trafikrubrik,
+    .uppdaterad {
+      grid-column: 1 / -1;
+    }
+    button {
+      border: none;
+    }
+
+    .fot a {
+      text-decoration: none;
+      margin-right: 2rem;
+    }
   }
 }

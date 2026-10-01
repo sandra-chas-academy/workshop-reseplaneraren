@@ -8,40 +8,52 @@
   </head>
   <body>
     <header class="topbar">
-      <nav class="header-nav"> 
-      <img src="img/logo.svg" class="logo" alt="Stadstrafiken">
-      <ul class="desktop-menu">
+      <nav class="header-nav">
+        <img src="img/logo.svg" class="logo" alt="Stadstrafiken" />
+        <ul class="desktop-menu">
           <li>
-              <a href="#">Reseplanering</a>
+            <a href="#">Reseplanering</a>
           </li>
           <li>
-              <a href="#">Biljetter</a>
+            <a href="#">Biljetter</a>
           </li>
           <li>
-              <a href="#">Kundservice</a>
+            <a href="#">Kundservice</a>
           </li>
           <li>
-              <a href="#">Aktuellt</a>
+            <a href="#">Aktuellt</a>
           </li>
-      </ul>
-      </nav>  
-      
+        </ul>
+      </nav>
+
       <button class="topbar-sok">
-          <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-              <circle cx="11" cy="11" r="6.5"/>
-              <line x1="15.8" y1="15.8" x2="21" y2="21"/>
-          </svg>
-          <span>Sök</span>
+        <svg
+          class="ikon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round">
+          <circle cx="11" cy="11" r="6.5" />
+          <line x1="15.8" y1="15.8" x2="21" y2="21" />
+        </svg>
+        <span>Sök</span>
       </button>
       <button class="topbar-meny">
-          <span class="visually-hidden">Meny</span>
-          <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-              <line x1="3" y1="6" x2="21" y2="6"/>
-              <line x1="3" y1="12" x2="21" y2="12"/>
-              <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
+        <span class="visually-hidden">Meny</span>
+        <svg
+          class="ikon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
       </button>
-  </header>
+    </header>
 
     <main>
       <div class="hero">
@@ -50,43 +62,42 @@
           <button class="flik aktiv">Sök resa</button>
           <button class="flik">Sök avgångar</button>
         </div>
+        <form>
+          <div class="sokpanel">
+            <h1 class="sokrubrik">Vart vill du åka?</h1>
+
+            <div class="falt-rad-fran-till">
+              <div class="falt">
+                <label for="from" class="etikett">Från</label>
+                <input type="text" class="input" id="from" />
+              </div>
+
+              <button type="button" class="vaxla">⇅</button>
+
+              <div class="falt">
+                <label for="to" class="etikett">Till</label>
+                <input type="text" class="input" id="to" />
+              </div>
+            </div>
+
+            <div class="desktop-sokrad">
+              <div class="falt-rad">
+                <div class="falt">
+                  <label for="date" class="etikett">Datum</label>
+                  <input type="date" class="input" id="date" />
+                </div>
+
+                <div class="falt">
+                  <label for="time" class="etikett">Tid</label>
+                  <input type="time" class="input" id="time" />
+                </div>
+              </div>
+
+              <button type="submit" class="knapp">Sök resa</button>
+            </div>
+          </div>
+        </form>
       </div>
-
-      <form>
-        <div class="sokpanel">
-          <h1 class="sokrubrik">Vart vill du åka?</h1>
-
-          <div class="falt-rad-fran-till">
-            <div class="falt">
-              <label for="from" class="etikett">Från</label>
-              <input type="text" class="input" id="from" />
-            </div>
-
-            <button type="button" class="vaxla">⇅</button>
-
-            <div class="falt">
-              <label for="to" class="etikett">Till</label>
-              <input type="text" class="input" id="to" />
-            </div>
-          </div>
-
-          <div class="desktop-sokrad">
-            <div class="falt-rad">
-              <div class="falt">
-                <label for="date" class="etikett">Datum</label>
-                <input type="date" class="input" id="date" />
-              </div>
-
-              <div class="falt">
-                <label for="time" class="etikett">Tid</label>
-                <input type="time" class="input" id="time" />
-              </div>
-            </div>
-
-            <button type="submit" class="knapp">Sök resa</button>
-          </div>
-        </div>
-      </form>
 
       <div class="genvagar">
         <nav>
