@@ -109,7 +109,7 @@ body {
   font-family: inherit;
   font-size: 16px;
   padding: 13px 12px;
-  border: 1px solid #d8dde2;
+  border: 1px solid #7e8082;
   background-color: #ffffff;
 }
 
@@ -147,7 +147,7 @@ a:focus-visible {
 
 .fel {
   display: block;
-  color: #fc1212;
+  color: #c70000;
   margin-bottom: 12px;
 }
 
@@ -202,7 +202,7 @@ a:focus-visible {
 
 .uppdaterad {
   font-size: 14px;
-  color: #9a9a9a;
+  color: #6e6e6e;
   margin-bottom: 14px;
 }
 
@@ -268,7 +268,7 @@ a:focus-visible {
 
 .fot-lank {
   font-size: 14px;
-  color: #9a9a9a;
+  color: #6e6e6e;
   padding: 8px 0;
   cursor: pointer;
 }
