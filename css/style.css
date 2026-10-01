@@ -306,6 +306,60 @@ body {
 }
 
 @media (min-width: 1100px) {
+  .trafik {
+    width: calc(100% - 80px);
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 32px 0;
+  }
+  .trafikrubrik {
+    font-size: 28px;
+  }
+  .trafiklista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+  }
+  .linjekort {
+    min-width: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .linjekort:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .linjekort:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .linjekort:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  /* Höger kolumn */
+  .linjekort:nth-child(5) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .linjekort:nth-child(6) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .linjekort:nth-child(4) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .linjenamn {
+    min-width: 0;
+    white-space: normal;
+  }
   .topbar {
     justify-content: flex-start;
     gap: 32px;
@@ -348,21 +402,124 @@ body {
     font-size: 13px;
   }
 
-  .topfalt-grupp{
+  .topfalt-grupp {
     display: flex;
     gap: 24px;
   }
-  .topfalt a{
+  .topfalt a {
     color: inherit;
     text-decoration: none;
   }
 
   .topfalt a[aria-current="page"] {
-    font-weight: 700
+    font-weight: 700;
     text-decoration: underline;
   }
 
-  .topfalt, .topbar{
+  .topfalt,
+  .topbar {
+    padding: 16px 40px;
+  }
+
+  .sokpanel {
+    width: calc(100% - 80px);
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 24px 32px 28px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px minmax(0, 1fr);
+    grid-template-areas:
+      "rubrik rubrik rubrik"
+      "fran vaxla till"
+      "datum datum knapp";
+    gap: 16px;
+  }
+  .sokrubrik {
+    grid-area: rubrik;
+    margin-bottom: 6px;
+    font-size: 28px;
+  }
+
+  .falt-fran {
+    grid-area: fran;
+  }
+
+  .falt-till {
+    grid-area: till;
+  }
+
+  .sokpanel .falt {
+    margin-bottom: 0;
+    min-width: 0;
+  }
+
+  .vaxla {
+    grid-area: vaxla;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    align-self: end;
+    margin-bottom: 3px;
+  }
+
+  .vaxla span {
+    display: block;
+    transform: rotate(90deg);
+  }
+
+  .falt-rad {
+    grid-area: datum;
+    width: 100%;
+    max-width: 416px;
+  }
+
+  .knapp {
+    grid-area: knapp;
+    width: auto;
+    justify-self: end;
+    align-self: end;
+    padding: 14px 32px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .fel {
+    grid-column: 1 / -1;
+  }
+  .reseomrade {
+    background-image: url("../img/tunnelbana-stockholm-1-1.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 32px;
+  }
+  .hero {
+    background-color: transparent;
+  }
+  .hero-bild {
+    height: 230px;
+    visibility: hidden;
+  }
+
+  .flikar {
+    justify-content: center;
+    padding: 0;
+    margin-top: -48px;
+  }
+
+  .flik {
+    height: 48px;
+    padding: 0 32px;
+    border: none;
+  }
+  .fot {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding-block: 16px;
     padding-inline: max(40px, calc((100% - 1200px) / 2));
   }
 }
