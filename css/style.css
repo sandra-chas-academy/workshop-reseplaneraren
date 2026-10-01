@@ -151,9 +151,13 @@ body {
 
 .fel {
     display: none;
-    height: 3px;
-    background-color: #c62828;
-    margin-bottom: 12px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 2px solid #c00;
+    background-color: #fee;
+    color: #900;
+
 }
 
 .knapp {
