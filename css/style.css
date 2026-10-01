@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #12151a;
     background-color: #ffffff;
 }
@@ -20,11 +20,12 @@ body {
 input:focus-visible,
 button:focus-visible,
 a:focus-visible {
-    outline: 3px solid #111;
+    outline: 3px solid rgb(206, 193, 7);
     outline-offset: 3px;
 }
 
 /* --- Topbar --- */
+
 
 .topbar {
     display: flex;
@@ -40,12 +41,13 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
     border: none;
     background: transparent;
     color: white;
+    padding: 22px;
 }
 
 .ikon {
@@ -82,7 +84,7 @@ a:focus-visible {
 
 .flik {
     padding: 14px 40px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     background-color: #007bb5;
     color: #ffffff;
@@ -105,7 +107,7 @@ a:focus-visible {
 }
 
 .sokrubrik {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 18px;
@@ -116,7 +118,7 @@ a:focus-visible {
 }
 
 .etikett {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 6px;
 }
@@ -124,7 +126,7 @@ a:focus-visible {
 .input {
     width: 100%;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 13px 12px;
     border: 1px solid #5C787F;
     background-color: #ffffff;
@@ -150,7 +152,7 @@ a:focus-visible {
     border-radius: 50%;
     background-color: #007bb5;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 1.7rem;
     line-height: 36px;
     text-align: center;
     cursor: pointer;
@@ -168,7 +170,7 @@ a:focus-visible {
 .knapp {
     background-color: #007bb5;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 700;
     text-align: center;
     padding: 14px;
@@ -188,7 +190,7 @@ a:focus-visible {
     align-items: center;
     justify-content: space-between;
     padding: 16px 14px;
-    font-size: 16px;
+    font-size: 1.6rem;
     border-bottom: 1px solid #e4e6e8;
     cursor: pointer;
 }
@@ -199,7 +201,7 @@ a:focus-visible {
 
 .pil {
     color: #007bb5;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 /* --- Trafikläget --- */
@@ -209,14 +211,14 @@ a:focus-visible {
 }
 
 .trafikrubrik {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 8px;
 }
 
 .uppdaterad {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #696969;
     margin-bottom: 14px;
 }
@@ -255,7 +257,7 @@ a:focus-visible {
 
 .linjenamn {
     flex: 1 1 auto;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 700;
     white-space: nowrap;
 }
@@ -287,7 +289,7 @@ a:focus-visible {
 }
 
 .fot-lank {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #696969;
     padding: 8px 0;
     cursor: pointer;
@@ -326,9 +328,85 @@ a:focus-visible {
         margin-inline: auto;
     }
 
-    main fieldset {
+    .hero>fieldset {
         border: 0;
         min-width: 0;
+    }
+
+
+    .hero {
+        position: relative;
+        isolation: isolate;
+        padding-top: 11.25rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-bild {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+    }
+
+    .flikar {
+        justify-content: center;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .hero>fieldset {
+        border: 0;
+        min-width: 0;
+    }
+
+
+
+    .genvagar {
+        display: none;
+    }
+
+
+    .genvagar-topbar {
+        display: flex;
+        gap: 30px;
+        margin-right: auto;
+        padding-left: 50px;
+    }
+
+    .genvag-top {
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .toppfalt-knappar {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 10px 40px;
+        background-color: rgb(32, 31, 31);
+    }
+
+    .knappar-text {
+        text-decoration: none;
+        color: white;
+        padding: 0px 10px;
+    }
+
+    .flikar {
+        justify-content: center;
+    }
+
+    .topbar-meny {
+        display: none;
+    }
+
+    .topbar {
+        flex-direction: row-reverse;
+        padding: 25px 45px;
     }
 
     .sokpanel {
@@ -414,6 +492,10 @@ a:focus-visible {
         min-width: 0;
     }
 
+    .knapp {
+        margin-left: 300px;
+    }
+
     .linjekort>span:last-child {
         font-size: 1.4rem;
     }
@@ -429,50 +511,4 @@ a:focus-visible {
         display: none;
     }
 
-
-    main {
-        display: grid;
-        grid-template-areas: "bild";
-
-    }
-
-    .genvagar {
-        display: none;
-    }
-
-
-    .genvagar-topbar {
-        display: flex;
-        gap: 30px;
-        margin-right: auto;
-        padding-left: 50px;
-    }
-
-
-    .toppfalt-knappar {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        padding: 10px 40px;
-        background-color: rgb(32, 31, 31);
-    }
-
-    .knappar-text {
-        text-decoration: none;
-        color: white;
-        padding: 0px 10px;
-    }
-
-    .flikar {
-        justify-content: center;
-    }
-
-    .topbar-meny {
-        display: none;
-    }
-
-    .topbar {
-        flex-direction: row-reverse;
-        padding: 25px 45px;
-    }
 }
