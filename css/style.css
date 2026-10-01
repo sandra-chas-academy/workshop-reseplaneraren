@@ -356,81 +356,85 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
+  }
+  .hero-bild {
+    opacity: 0;
+  }
 
-    .hero-bild {
-      opacity: 0;
-    }
+  /* Flikar centrerade */
+  .flikar {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
 
-    /* Flikar centrerade */
-    .flikar {
-      justify-content: center;
-      margin-top: 3.2rem;
-    }
+  /* Sökpanelen */
+  .sokpanel {
+    padding: 3rem;
+  }
 
-    /* Sökpanelen */
-    .sokpanel {
-      padding: 3rem;
-    }
+  /* Från och Till bredvid varandra */
+  .falt-rad-fran-till {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+  }
 
-    /* Från och Till bredvid varandra */
-    .falt-rad-fran-till {
-      display: flex;
-      align-items: flex-end;
-      gap: 1.2rem;
-    }
+  .falt-rad-fran-till .falt {
+    flex: 1;
+  }
 
-    .falt-rad-fran-till .falt {
-      flex: 1;
-    }
+  /* Växlaknappen mellan Från och Till */
+  .falt-rad-fran-till .vaxla {
+    flex: 0 0 36px;
+    margin: 0 0 1.2rem;
+    transform: rotate(90deg);
+  }
 
-    /* Växlaknappen mellan Från och Till */
-    .falt-rad-fran-till .vaxla {
-      flex: 0 0 36px;
-      margin: 0 0 1.2rem;
-      transform: rotate(90deg);
-    }
+  /* Datum, Tid och Sök resa på samma rad */
+  .desktop-sokrad {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 
-    /* Datum, Tid och Sök resa på samma rad */
-    .desktop-sokrad {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-    }
+  /* Datum och Tid */
+  .falt-rad {
+    display: flex;
+    gap: 1.2rem;
+  }
 
-    /* Datum och Tid */
-    .falt-rad {
-      display: flex;
-      gap: 1.2rem;
-    }
+  /* Kortare rutor för Datum och Tid */
+  .falt-rad .falt {
+    width: 180px;
+  }
 
-    /* Kortare rutor för Datum och Tid */
-    .falt-rad .falt {
-      width: 180px;
-    }
+  /* Sök resa längst till höger */
+  .knapp {
+    margin-left: auto;
+  }
 
-    /* Sök resa längst till höger */
-    .knapp {
-      margin-left: auto;
-    }
+  /* Trafikläget i två kolumner */
+  .trafik {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.6rem;
+  }
 
-    /* Trafikläget i två kolumner */
-    .trafik {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 1.6rem;
-    }
-  
-    .trafikrubrik,
-    .uppdaterad {
-      grid-column: 1 / -1;
-    }
-    button {
-      border: none;
-    }
+  .trafikrubrik,
+  .uppdaterad {
+    grid-column: 1 / -1;
+  }
 
-    .fot a {
-      text-decoration: none;
-      margin-right: 2rem;
-    }
+  .trafikrubrik {
+    margin-top: 3.2rem;
+  }
+
+  button {
+    border: none;
+  }
+
+  .fot a {
+    text-decoration: none;
+    margin-right: 2rem;
   }
 }
