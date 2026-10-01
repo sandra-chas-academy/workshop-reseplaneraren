@@ -11,6 +11,16 @@ body {
     background-color: #ffffff;
 }
 
+main{
+    width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 /* --- Topbar --- */
 
 .topbar {
@@ -72,12 +82,16 @@ body {
     color: #ffffff;
     cursor: pointer;
     white-space: nowrap;
+
+    border: none;
 }
 
 .flik.aktiv {
     background-color: #f1f2f3;
     color: #12151a;
     text-decoration: underline;
+
+    border: none;
 }
 
 /* --- Sökpanel --- */
@@ -109,13 +123,19 @@ body {
     font-family: inherit;
     font-size: 16px;
     padding: 13px 12px;
-    border: 1px solid #d8dde2;
+    border: 1px solid #868b90;
     background-color: #ffffff;
 }
 
 .input:focus {
     outline: none;
     border-color: #007bb5;
+}
+
+:focus-visible {
+    outline: 2px solid #ffcc00;
+    border-radius: 4px;
+    outline-offset: 2px;
 }
 
 .falt-rad {
@@ -138,6 +158,10 @@ body {
     line-height: 36px;
     text-align: center;
     cursor: pointer;
+
+    border: none;
+    display: block;
+
 }
 
 .fel {
@@ -155,6 +179,8 @@ body {
     text-align: center;
     padding: 14px;
     cursor: pointer;
+    
+    border: none;
 }
 
 /* --- Genvägar --- */
@@ -178,6 +204,10 @@ body {
     border-bottom: 0;
 }
 
+header .genvagar {
+    display: none;
+}
+
 .pil {
     color: #007bb5;
     font-size: 18px;
@@ -198,7 +228,7 @@ body {
 
 .uppdaterad {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #757575;
     margin-bottom: 14px;
 }
 
@@ -244,13 +274,45 @@ body {
 /* --- Fot --- */
 
 .fot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-top: 1px solid #e4e6e8;
     padding: 16px;
 }
 
 .fot-lank {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #767676;
     padding: 8px 0;
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .topbar {
+        flex-direction: row-reverse;
+    }
+
+    main .genvagar {
+        display: none;
+    }
+
+    .topbar-meny {
+        display: none;
+    }
+    
+    header .genvagar{
+        display: flex;
+        border: none;
+    }
+    .genvag {
+        border: none;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    .logo{
+        margin-right: 1rem;
+    }
 }
