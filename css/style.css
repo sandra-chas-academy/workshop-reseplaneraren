@@ -204,6 +204,10 @@ a{
     border-bottom: 0;
 }
 
+header .genvagar {
+    display: none;
+}
+
 .pil {
     color: #007bb5;
     font-size: 18px;
@@ -282,4 +286,33 @@ a{
     color: #767676;
     padding: 8px 0;
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .topbar {
+        flex-direction: row-reverse;
+    }
+
+    main .genvagar {
+        display: none;
+    }
+
+    .topbar-meny {
+        display: none;
+    }
+    
+    header .genvagar{
+        display: flex;
+        border: none;
+    }
+    .genvag {
+        border: none;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    .logo{
+        margin-right: 1rem;
+    }
 }
