@@ -9,7 +9,7 @@ Kryssa bara i det ni faktiskt gjort.
 - [x] A11Y-5 Fel type på fälten
 - [x] A11Y-6 Rubriker och landmärken saknas
 - [x] A11Y-7 Kontrast under kraven
-- [ ] A11Y-8 Störningsläget syns bara som färgad prick
+- [x] A11Y-8 Störningsläget syns bara som färgad prick
 - [ ] A11Y-9 Bilderna saknar alt
 - [ ] A11Y-10 Fel språk i html
 - [ ] RWD-1 Desktopvyn finns inte
