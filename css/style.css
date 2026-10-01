@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -114,8 +119,11 @@ body {
 }
 
 .input:focus {
-    outline: none;
     border-color: #007bb5;
+}
+.input:focus-visible {
+    outline: 2px solid #007bb5;
+    outline-offset: 2px;
 }
 
 .falt-rad {
@@ -128,6 +136,7 @@ body {
 }
 
 .vaxla {
+    margin: 0 auto;
     width: 36px;
     height: 36px;
     margin: 0 auto 12px;
@@ -148,6 +157,7 @@ body {
 }
 
 .knapp {
+    border: none;
     background-color: #007bb5;
     color: #ffffff;
     font-size: 17px;
