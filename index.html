@@ -7,137 +7,141 @@
     <title>Stadstrafiken</title>
   </head>
   <body>
-    <div class="topbar">
-      <button class="topbar-sok">
-        <svg
-          class="ikon"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.2"
-          stroke-linecap="round"
-        >
-          <circle cx="11" cy="11" r="6.5" />
-          <line x1="15.8" y1="15.8" x2="21" y2="21" />
-        </svg>
-        <span>Sök</span>
-      </button>
-      <img src="img/logo.svg" class="logo" />
-      <button class="topbar-meny">
-        <span>Meny</span>
-        <svg
-          class="ikon"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.2"
-          stroke-linecap="round"
-        >
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-      </button>
-    </div>
+    <header>
+      <nav class="topbar">
+        <button class="topbar-sok">
+          <svg
+            class="ikon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="6.5" />
+            <line x1="15.8" y1="15.8" x2="21" y2="21" />
+          </svg>
+          <span>Sök</span>
+        </button>
+        <img src="img/logo.svg" class="logo" />
+        <button class="topbar-meny">
+          <span>Meny</span>
+          <svg
+            class="ikon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+    </header>
 
-    <div class="hero">
-      <img src="img/tunnelbana-stockholm-1-1.jpg" class="hero-bild" />
-      <div class="flikar">
-        <button class="flik aktiv">Sök resa</button>
-        <button class="flik">Sök avgångar</button>
-      </div>
-    </div>
-
-    <form action="" class="sokpanel">
-      <div class="sokrubrik">Vart vill du åka?</div>
-
-      <div class="falt">
-        <label for="from" class="etikett">Från</label>
-        <input
-          type="text"
-          class="input"
-          id="from"
-          name="from"
-          autocomplete="address-line1"
-        />
-      </div>
-
-      <button class="vaxla">⇅</button>
-
-      <div class="falt">
-        <label for="to" class="etikett">Till</label>
-        <input
-          type="text"
-          class="input"
-          id="to"
-          name="to"
-          autocomplete="address-line1"
-        />
-      </div>
-
-      <div class="falt-rad">
-        <div class="falt">
-          <label for="date" class="etikett">Datum</label>
-          <input type="date" class="input" name="date" />
-        </div>
-        <div class="falt">
-          <label for="time" class="etikett">Tid</label>
-          <input type="time" class="input" name="time" />
+    <main>
+      <div class="hero">
+        <img src="img/tunnelbana-stockholm-1-1.jpg" class="hero-bild" />
+        <div class="flikar">
+          <button class="flik aktiv">Sök resa</button>
+          <button class="flik">Sök avgångar</button>
         </div>
       </div>
 
-      <div class="fel" role="alert">X Fel format på datum!</div>
+      <form action="" class="sokpanel">
+        <h1 class="sokrubrik">Vart vill du åka?</h1>
 
-      <button class="knapp">Sök resa</button>
-    </form>
+        <div class="falt">
+          <label for="from" class="etikett">Från</label>
+          <input
+            type="text"
+            class="input"
+            id="from"
+            name="from"
+            autocomplete="address-line1"
+          />
+        </div>
 
-    <div class="genvagar">
-      <a href="" class="genvag">Reseplanering<span class="pil">→</span></a>
-      <a href="" class="genvag">Biljetter<span class="pil">→</span></a>
-      <a href="" class="genvag">Kundservice<span class="pil">→</span></a>
-      <a href="" class="genvag">Aktuellt<span class="pil">→</span></a>
-    </div>
+        <button class="vaxla">⇅</button>
 
-    <div class="trafik">
-      <div class="trafikrubrik">Trafikläget just nu</div>
-      <div class="uppdaterad">Uppdaterad idag 13:26</div>
+        <div class="falt">
+          <label for="to" class="etikett">Till</label>
+          <input
+            type="text"
+            class="input"
+            id="to"
+            name="to"
+            autocomplete="address-line1"
+          />
+        </div>
 
-      <div class="linjekort">
-        <span class="linjeikon tunnelbana"></span>
-        <span class="linjenamn">Blå linjen</span>
-        <span class="status ok"></span>
-      </div>
-      <div class="linjekort">
-        <span class="linjeikon tunnelbana"></span>
-        <span class="linjenamn">Röda linjen</span>
-        <span class="status ok"></span>
-      </div>
-      <div class="linjekort">
-        <span class="linjeikon tunnelbana"></span>
-        <span class="linjenamn">Gröna linjen</span>
-        <span class="status ok"></span>
-      </div>
-      <div class="linjekort">
-        <span class="linjeikon pendel"></span>
-        <span class="linjenamn">Pendeltåg</span>
-        <span class="status varning"></span>
-      </div>
-      <div class="linjekort">
-        <span class="linjeikon sparvagn"></span>
-        <span class="linjenamn">Spårvagn och lokalbana</span>
-        <span class="status info"></span>
-      </div>
-      <div class="linjekort">
-        <span class="linjeikon buss"></span>
-        <span class="linjenamn">Buss</span>
-        <span class="status info"></span>
-      </div>
-    </div>
+        <div class="falt-rad">
+          <div class="falt">
+            <label for="date" class="etikett">Datum</label>
+            <input type="date" class="input" name="date" />
+          </div>
+          <div class="falt">
+            <label for="time" class="etikett">Tid</label>
+            <input type="time" class="input" name="time" />
+          </div>
+        </div>
 
-    <div class="fot">
+        <div class="fel" role="alert">X Fel format på datum!</div>
+
+        <button class="knapp">Sök resa</button>
+      </form>
+
+      <nav role="navigation" class="genvagar">
+        <a href="" class="genvag">Reseplanering<span class="pil">→</span></a>
+        <a href="" class="genvag">Biljetter<span class="pil">→</span></a>
+        <a href="" class="genvag">Kundservice<span class="pil">→</span></a>
+        <a href="" class="genvag">Aktuellt<span class="pil">→</span></a>
+      </nav>
+
+      <div class="trafik">
+        <h2 class="trafikrubrik">Trafikläget just nu</h2>
+        <div class="uppdaterad">Uppdaterad idag 13:26</div>
+
+        <div class="linjekort">
+          <span class="linjeikon tunnelbana"></span>
+          <span class="linjenamn">Blå linjen</span>
+          <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+          <span class="linjeikon tunnelbana"></span>
+          <span class="linjenamn">Röda linjen</span>
+          <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+          <span class="linjeikon tunnelbana"></span>
+          <span class="linjenamn">Gröna linjen</span>
+          <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+          <span class="linjeikon pendel"></span>
+          <span class="linjenamn">Pendeltåg</span>
+          <span class="status varning"></span>
+        </div>
+        <div class="linjekort">
+          <span class="linjeikon sparvagn"></span>
+          <span class="linjenamn">Spårvagn och lokalbana</span>
+          <span class="status info"></span>
+        </div>
+        <div class="linjekort">
+          <span class="linjeikon buss"></span>
+          <span class="linjenamn">Buss</span>
+          <span class="status info"></span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fot">
       <a href="" class="fot-lank">Om Stadstrafiken</a>
       <a href="" class="fot-lank">Kontakta oss</a>
       <a href="" class="fot-lank">Tillgänglighet</a>
-    </div>
+    </footer>
   </body>
 </html>
