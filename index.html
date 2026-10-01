@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Stadstrafiken</title>
+  </head>
+  <body>
+    <header>
+      <nav class="topfalt" aria-label="övrigalänkar">
+        <div class="topfalt-grupp">
+          <a href="index.html" aria-current="page">Privat </a>
+          <a href="foretag.html">Företag</a>
+        </div>
+
+        <div class="topfalt-grupp">
+          <a href="english.html" lang="en">English</a>
+          <a href="teckenspråk.html">Teckenspråk</a>
+          <a href="lattlast.html">Lättläst</a>
+          <a href="logga-in.html">Logga in</a>
+        </div>
+      </nav>
+
+      <nav class="topbar" aria-label="Övriga länkar">
+        <img src="img/logo.svg" class="logo" />
+
+        <div class="desktop-meny">
+          <a href="reseplanering.html">Reseplanering</a>
+          <a href="biljetter.html">Biljetter</a>
+          <a href="kundservice.html">Kundservice</a>
+          <a href="aktuellt.html">Aktuellt</a>
+        </div>
+
+        <!-- sök  -->
+        <button class="topbar-sok">
+          <svg
+            class="ikon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="6.5" />
+            <line x1="15.8" y1="15.8" x2="21" y2="21" />
+          </svg>
+          <span>Sök</span>
+        </button>
+        <button class="topbar-meny">
+          <span>Meny</span>
+          <svg
+            class="ikon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <div class="reseomrade">
+        <div class="hero">
+          <img src="img/tunnelbana-stockholm-1-1.jpg" class="hero-bild" />
+          <div class="flikar">
+            <button class="flik aktiv">Sök resa</button>
+            <button class="flik">Sök avgångar</button>
+          </div>
+        </div>
+
+        <form class="sokpanel">
+          <h1 class="sokrubrik">Vart vill du åka?</h1>
+
+          <div class="falt falt-fran">
+            <label for="fran" class="etikett">Från</label>
+            <input
+              type="text"
+              id="fran"
+              name="fran"
+              class="input"
+              autocomplete="on"
+            />
+          </div>
+
+          <button type="button" class="vaxla" aria-label="byt plats">
+            <span aria-hidden="true">⇅</span>
+          </button>
+          <div class="falt falt-till">
+            <label for="till" class="etikett">Till</label>
+            <input
+              type="text"
+              id="till"
+              name="till"
+              class="input"
+              autocomplete="on"
+            />
+          </div>
+
+          <div class="falt-rad">
+            <div class="falt">
+              <label for="datum" class="etikett">Datum</label>
+              <input type="date" id="datum" name="datum" class="input" />
+            </div>
+            <div class="falt">
+              <label for="tid" class="etikett">Tid</label>
+              <input type="time" id="tid" name="tid" class="input" />
+            </div>
+          </div>
+
+          <div class="fel" role="alert">
+            Fel: Avreseplan saknas. Fyll i fältet "Från" för att söka en resa.
+          </div>
+
+          <button class="knapp">Sök resa</button>
+        </form>
+      </div>
+
+      <div class="genvagar">
+        <a href="" class="genvag"
+          >Reseplanering<span class="pil" aria-hidden="true">→</span></a
+        >
+        <a href="" class="genvag"
+          >Biljetter<span class="pil" aria-hidden="true">→</span></a
+        >
+        <a href="" class="genvag"
+          >Kundservice<span class="pil" aria-hidden="true">→</span></a
+        >
+        <a href="" class="genvag"
+          >Aktuellt<span class="pil" aria-hidden="true">→</span></a
+        >
+      </div>
+
+      <div class="trafik">
+        <h2 class="trafikrubrik">Trafikläget just nu</h2>
+        <p class="uppdaterad">Uppdaterad idag 13:26</p>
+
+        <div class="trafik-lista">
+          <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Blå linjen</span>
+
+            <span class="linjestatus">
+              <span class="status ok" aria-hidden="true"></span>
+              <span> Inga rapporterade störningar</span>
+            </span>
+          </div>
+          <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Röda linjen</span>
+
+            <span class="linjestatus">
+              <span class="status ok" aria-hidden="true"></span>
+              <span>Inga rapporterade störningar</span>
+            </span>
+          </div>
+          <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Gröna linjen</span>
+
+            <span class="linjestatus">
+              <span class="status ok" aria-hidden="true"></span>
+              <span>Inga rapporterade störningar</span>
+            </span>
+          </div>
+          <div class="linjekort">
+            <span class="linjeikon pendel"></span>
+            <span class="linjenamn">Pendeltåg</span>
+            <span class="status varning" aria-hidden="true"></span>
+            <span>Stora störningar</span>
+          </div>
+          <div class="linjekort">
+            <span class="linjeikon sparvagn"></span>
+            <span class="linjenamn">Spårvagn och lokalbana</span>
+            <span class="status info" aria-hidden="true"></span>
+            <span>Måttliga störningar</span>
+          </div>
+          <div class="linjekort">
+            <span class="linjeikon buss"></span>
+            <span class="linjenamn">Buss</span>
+            <span class="status info" aria-hidden="true"></span>
+            <span>Måttliga störningar</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="fot">
+      <div class="fot-lank">Om Stadstrafiken</div>
+      <div class="fot-lank">Kontakta oss</div>
+      <div class="fot-lank">Tillgänglighet</div>
+    </footer>
+  </body>
+</html>
