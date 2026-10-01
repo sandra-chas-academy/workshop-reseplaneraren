@@ -9,9 +9,13 @@
   outline-offset: 2px;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #12151a;
     background-color: #ffffff;
 }
@@ -24,7 +28,7 @@ body {
     justify-content: space-between;
     background-color: #007bb5;
     color: #ffffff;
-    padding: 14px 16px;
+    padding: 1.4rem 1.6rem;
 }
 
 .topbar-sok,
@@ -32,7 +36,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -65,13 +69,13 @@ body {
 .flikar {
     display: flex;
     padding: 0 16px;
-    margin-top: -48px;
+    margin-top: -4.8rem;
     position: relative;
 }
 
 .flik {
-    padding: 14px 40px;
-    font-size: 16px;
+    padding: 1.4rem 4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     background-color: #007bb5;
     color: #ffffff;
@@ -93,27 +97,27 @@ body {
 }
 
 .sokrubrik {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 1.8rem;
 }
 
 .falt {
-    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
 }
 
 .etikett {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
 }
 
 .input {
     width: 100%;
     font-family: inherit;
-    font-size: 16px;
-    padding: 13px 12px;
+    font-size: 1.6rem;
+    padding: 1.3rem 1.2rem;
     border: 1px solid #626060;
     background-color: #ffffff;
 }
@@ -128,7 +132,7 @@ body {
 
 .falt-rad {
     display: flex;
-    gap: 12px;
+    gap: 1.2rem;
 }
 
 .falt-rad .falt {
@@ -139,21 +143,21 @@ body {
     margin: 0 auto;
     width: 36px;
     height: 36px;
-    margin: 0 auto 12px;
+    margin: 0 auto 1.2rem;
     border-radius: 50%;
     background-color: #007bb5;
     color: #ffffff;
-    font-size: 17px;
-    line-height: 36px;
+    font-size: 1.7rem;
+    line-height: 3.6rem;
     text-align: center;
     cursor: pointer;
 }
 
 .fel {
     display: none;
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    padding: 1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
     border: 2px solid #c00;
     background-color: #fee;
     color: #900;
@@ -164,17 +168,17 @@ body {
     border: none;
     background-color: #007bb5;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 700;
     text-align: center;
-    padding: 14px;
+    padding: 1.4rem;
     cursor: pointer;
 }
 
 /* --- Genvägar --- */
 
 .genvagar {
-    margin: 20px 16px;
+    margin: 2rem 1.6rem;
     border: 1px solid #e4e6e8;
 }
 
@@ -182,8 +186,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 14px;
-    font-size: 16px;
+    padding: 1.6rem 1.4rem;
+    font-size: 1.6rem;
     border-bottom: 1px solid #e4e6e8;
     cursor: pointer;
 }
@@ -194,42 +198,42 @@ body {
 
 .pil {
     color: #007bb5;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 /* --- Trafikläget --- */
 
 .trafik {
-    padding: 8px 16px 24px;
+    padding: 0.8rem 1.6rem 2.4rem;
 }
 
 .trafikrubrik {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
 }
 
 .uppdaterad {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #777474;
-    margin-bottom: 14px;
+    margin-bottom: 1.4rem;
 }
 
 .linjekort {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 1.2rem;
     background-color: #f1f2f3;
-    padding: 14px;
-    margin-bottom: 10px;
+    padding: 1.4rem;
+    margin-bottom: 1rem;
 }
 
 .linjeikon {
     width: 24px;
     height: 24px;
     flex: 0 0 24px;
-    border-radius: 4px;
+    border-radius: 0.4rem;
 }
 
 .tunnelbana { background-color: #12151a; }
@@ -239,7 +243,7 @@ body {
 
 .linjenamn {
     flex: 1 1 auto;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 700;
     white-space: nowrap;
 }
@@ -247,7 +251,7 @@ body {
 .status {
     width: 22px;
     height: 22px;
-    flex: 0 0 22px;
+    flex: 0 0 auto;
     border-radius: 50%;
 }
 
@@ -259,12 +263,12 @@ body {
 
 .fot {
     border-top: 1px solid #e4e6e8;
-    padding: 16px;
+    padding: 1.6rem;
 }
 
 .fot-lank {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #767373;
-    padding: 8px 0;
+    padding: 0.8rem 0;
     cursor: pointer;
 }
