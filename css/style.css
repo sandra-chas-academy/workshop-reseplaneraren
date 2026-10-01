@@ -1,256 +1,440 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #12151a;
-    background-color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #12151a;
+  background-color: #ffffff;
 }
 
 /* --- Topbar --- */
 
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.desktop-menu {
+  display: none;
+  gap: 2rem;
+  li {
+    list-style: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 .topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #007bb5;
-    color: #ffffff;
-    padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  background-color: #007bb5;
+  color: #ffffff;
+  padding: 1.4rem 1.6rem;
 }
 
 .topbar-sok,
 .topbar-meny {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+
+  padding: 1.2rem;
 }
 
 .ikon {
-    width: 22px;
-    height: 22px;
-    flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
 }
 
 .logo {
-    width: 52px;
-    height: 52px;
+  width: 52px;
+  height: 52px;
 }
 
 /* --- Hero --- */
 
 .hero {
-    position: relative;
-    background-color: #0e1620;
+  position: relative;
+  background-color: #0e1620;
 }
 
 .hero-bild {
-    display: block;
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 .flikar {
-    display: flex;
-    padding: 0 16px;
-    margin-top: -48px;
-    position: relative;
+  display: flex;
+  padding: 0 16px;
+  margin-top: -4.8rem;
+  position: relative;
 }
 
 .flik {
-    padding: 14px 40px;
-    font-size: 16px;
-    font-weight: 700;
-    background-color: #007bb5;
-    color: #ffffff;
-    cursor: pointer;
-    white-space: nowrap;
+  padding: 1.4rem 4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: #007bb5;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .flik.aktiv {
-    background-color: #f1f2f3;
-    color: #12151a;
-    text-decoration: underline;
+  background-color: #f1f2f3;
+  color: #12151a;
+  text-decoration: underline;
 }
 
 /* --- Sökpanel --- */
 
 .sokpanel {
-    background-color: #f1f2f3;
-    padding: 20px 16px 24px;
+  background-color: #f1f2f3;
+  padding: 20px 16px 24px;
 }
 
 .sokrubrik {
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 18px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.8rem;
 }
 
 .falt {
-    margin-bottom: 12px;
+  margin-bottom: 1.2rem;
 }
 
 .etikett {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
 .input {
-    width: 100%;
-    font-family: inherit;
-    font-size: 16px;
-    padding: 13px 12px;
-    border: 1px solid #d8dde2;
-    background-color: #ffffff;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 1.3rem 1.2rem;
+  border: 1px solid #626060;
+  background-color: #ffffff;
 }
 
 .input:focus {
-    outline: none;
-    border-color: #007bb5;
+  border-color: #007bb5;
+}
+.input:focus-visible {
+  outline: 2px solid #007bb5;
+  outline-offset: 2px;
 }
 
 .falt-rad {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 1.2rem;
 }
 
 .falt-rad .falt {
-    flex: 1 1 0;
+  flex: 1 1 0;
 }
 
 .vaxla {
-    width: 36px;
-    height: 36px;
-    margin: 0 auto 12px;
-    border-radius: 50%;
-    background-color: #007bb5;
-    color: #ffffff;
-    font-size: 17px;
-    line-height: 36px;
-    text-align: center;
-    cursor: pointer;
+  margin: 0 auto;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  background-color: #007bb5;
+  color: #ffffff;
+  font-size: 1.7rem;
+  line-height: 3.6rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 .fel {
-    display: none;
-    height: 3px;
-    background-color: #c62828;
-    margin-bottom: 12px;
+  display: none;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  border: 2px solid #c00;
+  background-color: #fee;
+  color: #900;
 }
 
 .knapp {
-    background-color: #007bb5;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 700;
-    text-align: center;
-    padding: 14px;
-    cursor: pointer;
+  border: none;
+  background-color: #007bb5;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.4rem;
+  cursor: pointer;
 }
 
 /* --- Genvägar --- */
 
 .genvagar {
-    margin: 20px 16px;
-    border: 1px solid #e4e6e8;
+  margin: 2rem 1.6rem;
+  border: 1px solid #e4e6e8;
 }
 
 .genvag {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 14px;
-    font-size: 16px;
-    border-bottom: 1px solid #e4e6e8;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 1.4rem;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #e4e6e8;
+  cursor: pointer;
 }
 
 .genvag:last-child {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .pil {
-    color: #007bb5;
-    font-size: 18px;
+  color: #007bb5;
+  font-size: 1.8rem;
 }
 
 /* --- Trafikläget --- */
 
 .trafik {
-    padding: 8px 16px 24px;
+  padding: 0.8rem 1.6rem 2.4rem;
 }
 
 .trafikrubrik {
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 8px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.8rem;
 }
 
 .uppdaterad {
-    font-size: 14px;
-    color: #9a9a9a;
-    margin-bottom: 14px;
+  font-size: 1.4rem;
+  color: #777474;
+  margin-bottom: 1.4rem;
 }
 
 .linjekort {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #f1f2f3;
-    padding: 14px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background-color: #f1f2f3;
+  padding: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .linjeikon {
-    width: 24px;
-    height: 24px;
-    flex: 0 0 24px;
-    border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border-radius: 0.4rem;
 }
 
-.tunnelbana { background-color: #12151a; }
-.pendel     { background-color: #007a5e; }
-.sparvagn   { background-color: #6a3f9e; }
-.buss       { background-color: #c8102e; }
+.tunnelbana {
+  background-color: #12151a;
+}
+.pendel {
+  background-color: #007a5e;
+}
+.sparvagn {
+  background-color: #6a3f9e;
+}
+.buss {
+  background-color: #c8102e;
+}
 
 .linjenamn {
-    flex: 1 1 auto;
-    font-size: 17px;
-    font-weight: 700;
-    white-space: nowrap;
+  flex: 1 1 auto;
+  font-size: 1.7rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .status {
-    width: 22px;
-    height: 22px;
-    flex: 0 0 22px;
-    border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  border-radius: 50%;
 }
 
-.status.ok      { background-color: #1b7a3d; }
-.status.varning { background-color: #c77700; }
-.status.info    { background-color: #4c5157; }
+.status.ok {
+  background-color: #1b7a3d;
+}
+.status.varning {
+  background-color: #c77700;
+}
+.status.info {
+  background-color: #4c5157;
+}
 
 /* --- Fot --- */
 
 .fot {
-    border-top: 1px solid #e4e6e8;
-    padding: 16px;
+  border-top: 1px solid #e4e6e8;
+  padding: 1.6rem;
 }
 
 .fot-lank {
-    font-size: 14px;
-    color: #9a9a9a;
-    padding: 8px 0;
-    cursor: pointer;
+  font-size: 1.4rem;
+  color: #767373;
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+/* ===========================
+   Desktop
+   =========================== */
+
+@media (min-width: 768px) {
+  /* Navbar */
+  .desktop-menu {
+    display: flex;
+  }
+
+  .search-container {
+    flex: 0 0 auto;
+  }
+
+  .header-nav {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.2rem;
+  }
+  .topbar-meny {
+    display: none;
+  }
+
+  /* Genvägar */
+  .genvagar {
+    display: none;
+  }
+
+  .hero {
+    padding: 2rem 3rem;
+    background-image: url(/img/tunnelbana-stockholm-1-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .hero-bild {
+    opacity: 0;
+  }
+
+  /* Flikar centrerade */
+  .flikar {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  /* Sökpanelen */
+  .sokpanel {
+    padding: 3rem;
+  }
+
+  /* Från och Till bredvid varandra */
+  .falt-rad-fran-till {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+  }
+
+  .falt-rad-fran-till .falt {
+    flex: 1;
+  }
+
+  /* Växlaknappen mellan Från och Till */
+  .falt-rad-fran-till .vaxla {
+    flex: 0 0 36px;
+    margin: 0 0 1.2rem;
+    transform: rotate(90deg);
+  }
+
+  /* Datum, Tid och Sök resa på samma rad */
+  .desktop-sokrad {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  /* Datum och Tid */
+  .falt-rad {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  /* Kortare rutor för Datum och Tid */
+  .falt-rad .falt {
+    width: 180px;
+  }
+
+  /* Sök resa längst till höger */
+  .knapp {
+    margin-left: auto;
+  }
+
+  /* Trafikläget i två kolumner */
+  .trafik {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.6rem;
+  }
+
+  .trafikrubrik,
+  .uppdaterad {
+    grid-column: 1 / -1;
+  }
+
+  .trafikrubrik {
+    margin-top: 3.2rem;
+  }
+
+  button {
+    border: none;
+  }
+
+  .fot a {
+    text-decoration: none;
+    margin-right: 2rem;
+  }
 }
