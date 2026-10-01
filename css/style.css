@@ -146,9 +146,8 @@ a:focus-visible {
 }
 
 .fel {
-  display: none;
-  height: 3px;
-  background-color: #c62828;
+  display: block;
+  color: #fc1212;
   margin-bottom: 12px;
 }
 
