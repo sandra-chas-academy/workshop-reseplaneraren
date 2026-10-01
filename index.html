@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div class="topbar">
+    <header class="topbar"> </header>
         <button type="button" class="topbar-sok">
             <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
                 <circle cx="11" cy="11" r="6.5"/>
@@ -29,40 +29,40 @@
 
     <div class="hero">
         <img src="img/tunnelbana-stockholm-1-1.jpg" class="hero-bild">
-        <div class="flikar">
+        <nav class="flikar">
             <button type="button" class="flik aktiv" aria-selected="true">Sök resa</button>
             <button type="button" class="flik" aria-selected="false">Sök avgångar</button>
-        </div>
+        </nav>
     </div>
 
-    <div class="sokpanel">
-        <div class="sokrubrik">Vart vill du åka?</div>
+    <main class="sokpanel">
+        <h1 class="sokrubrik">Vart vill du åka?</h1>
 
         <form>
             <div class="falt">
                 <label for="fran" class="etikett">Från</label>
-                <input type="text" id="fran" class="input">
+                <input type="text" id="fran" class="input" autocomplete="street-address">
             </div>
 
             <button type="button" class="vaxla" aria-label="Byt plats på från och till">⇅</button>
 
             <div class="falt">
                 <label for="till" class="etikett">Till</label>
-                <input type="text" id="till" class="input">
+                <input type="text" id="till" class="input" autocomplete="street-address">
             </div>
 
             <div class="falt-rad">
                 <div class="falt">
                     <label for="datum" class="etikett">Datum</label>
-                    <input type="text" id="datum" class="input">
+                    <input type="date" id="datum" class="input">
                 </div>
                 <div class="falt">
                     <label for="tid" class="etikett">Tid</label>
-                    <input type="text" id="tid" class="input">
+                    <input type="time" id="tid" class="input">
                 </div>
             </div>
 
-            <div class="fel" role="alert"></div>
+            <div class="fel" role="alert">något gick fel kontrollera dina uppgifter och försök igen</div>
 
             <button type="submit" class="knapp">Sök resa</button>
         </form>
@@ -76,7 +76,7 @@
     </div>
 
     <div class="trafik">
-        <div class="trafikrubrik">Trafikläget just nu</div>
+        <h2 class="trafikrubrik">Trafikläget just nu</h2>
         <div class="uppdaterad">Uppdaterad idag 13:26</div>
 
         <div class="linjekort">
@@ -110,12 +110,12 @@
             <span class="status info"></span>
         </div>
     </div>
-
-    <div class="fot">
+    </main>
+    <footer class="fot">
         <a href="#" class="fot-lank">Om Stadstrafiken</a>
         <a href="#" class="fot-lank">Kontakta oss</a>
         <a href="#" class="fot-lank">Tillgänglighet</a>
-    </div>
+    </footer>
 
 </body>
-</html
+</html>
