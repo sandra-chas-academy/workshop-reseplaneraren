@@ -19,20 +19,52 @@ header button{
 
 /* --- Topbar --- */
 
+/* top-header */
+
 .topbar {
-    display: flex;
+
     align-items: center;
     justify-content: space-between;
     background-color: #007bb5;
     color: #ffffff;
-    padding: 14px 16px;
+    
 }
+
+.top-header-bg {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+
+.top-header-left ul, 
+.top-header-right ul {
+list-style: none;
+display: flex;
+flex-direction: row;
+gap: 1rem
+;
+    }
+
+.top-header-left a,
+.top-header-right a {
+text-decoration: none;
+color: white;
+    }
+    
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    } */
 
 .topbar-sok,
 .topbar-meny {
     display: flex;
     align-items: center;
-
     gap: 8px;
     font-size: 16px;
     font-weight: 600;
@@ -275,4 +307,17 @@ a:focus-visible,
     padding: 8px 0;
     cursor: pointer;
     text-decoration: none;
+}
+
+
+/* För desktop */
+
+@media (min-width: 1280px) {
+
+.topbar-meny{
+    display: none;
+}
+
+
+
 }
