@@ -147,9 +147,10 @@ body {
 
 .fel {
     display: none;
-    height: 3px;
+    height: 20px;
     background-color: #c62828;
     margin-bottom: 12px;
+    color: yellow;
 }
 
 .knapp {
