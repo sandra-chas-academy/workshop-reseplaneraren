@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Stadstrafiken</title>
+</head>
+<body>
+    <header class="topbar">
+        <button class="topbar-sok" tabindex="1">
+            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="6.5"/>
+                <line x1="15.8" y1="15.8" x2="21" y2="21"/>
+            </svg>
+            <span>Sök</span>
+        </button>
+        <img src="img/logo.svg" alt="ST Logobild" class="logo">
+        <button class="topbar-meny" tabindex="2">
+            <span>Meny</span>
+            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </header>
+
+    <section class="hero">
+        <img src="img/tunnelbana-stockholm-1-1.jpg" alt="Bild på tunnelbanan i Stockholm" class="hero-bild">
+        <div class="flikar">
+            <button class="flik aktiv flik-knapp" tabindex="3">Sök resa</button>
+            <button class="flik flik-knapp" tabindex="4">Sök avgångar</button>
+        </div>
+    </section>
+
+    <main class="sokpanel">
+        <h1 class="sokrubrik">Vart vill du åka?</h1>
+
+        <form id="reseplanerare-form">
+        <div class="falt">
+            <label class="etikett" id="reseplanerare-fran-label">Från</label>
+            <input tabindex="5" type="text" class="input" autocomplete= "address-level3">
+        </div>
+
+        <div class="vaxla">⇅</div>
+
+        <div class="falt">
+            <label class="etikett" id="reseplanerare-till-label">Till</label>
+            <input tabindex="6" type="text" class="input" autocomplete= "address-level3">
+        </div>
+
+        <div class="falt-rad">
+            <div class="falt">
+                <label class="etikett" id="reseplanerare-datum-label">Datum</label>
+                <input tabindex="7" type="date" class="input">
+            </div>
+            <div class="falt">
+                <label class="etikett" id="reseplanerare-tid-label">Tid</label>
+                <input tabindex="8" type="time" class="input">
+            </div>
+        </div>
+       </form>
+       
+        <div class="fel" role="alert">
+            <p>Vänligen ange en destination</p>
+        </div>
+
+        <button tabindex="9" class="knapp">Sök resa</button>
+    </main>
+
+    <nav class="genvagar">
+        <a href="" class="genvag-lank">
+            <div tabindex="10" class="genvag">Reseplanering<span class="pil">→</span></div>
+        </a>
+        <a href="" class="genvag-lank">
+            <div tabindex="11" class="genvag">Biljetter<span class="pil">→</span></div>
+        </a>
+        <a href="" class="genvag-lank">
+            <div tabindex="12" class="genvag">Kundservice<span class="pil">→</span></div>
+        </a>
+        <a href="" class="genvag-lank">
+            <div tabindex="13" class="genvag">Aktuellt<span class="pil">→</span></div>
+        </a>
+    </nav>
+
+    <section class="trafik">
+        <h2 class="trafikrubrik">Trafikläget just nu</h2>
+        <div class="uppdaterad">Uppdaterad idag 13:26</div>
+
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <h3 class="linjenamn">Blå linjen</h3>
+            <p class="trafiklage-bla">Inga störningar</p>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <h4 class="linjenamn">Röda linjen</h4>
+            <p class="trafiklage-rod">Inga störningar</p>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <h3 class="linjenamn">Gröna linjen</h3>
+            <p class="trafiklage-gro">Inga störningar</p>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon pendel"></span>
+            <h3 class="linjenamn">Pendeltåg</h3>
+            <p class="trafiklage-pendel">Stora störningar</p>
+            <span class="status varning"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon sparvagn"></span>
+            <h3 class="linjenamn">Spårvagn och lokalbana</h3>
+            <p class="trafiklage-sporvagn">Måttliga störningar</p>
+            <span class="status info"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon buss"></span>
+            <h3 class="linjenamn">Buss</h3>
+            <p class="trafiklage-buss">Måttliga störningar</p>
+            <span class="status info"></span>
+        </div>
+    </section>
+
+    <footer class="fot">
+        <div class="fot-lank">Om Stadstrafiken</div>
+        <div class="fot-lank">Kontakta oss</div>
+        <div class="fot-lank">Tillgänglighet</div>
+    </footer>
+
+</body>
+</html>
