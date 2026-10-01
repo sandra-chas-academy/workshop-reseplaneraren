@@ -124,9 +124,12 @@ section {
     background-color: #ffffff;
 }
 
-.input:focus {
-    outline: none;
-    border-color: #007bb5;
+button:focus-visible,
+a:focus-visible,
+.input:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #fff;     
 }
 
 .falt-rad {
