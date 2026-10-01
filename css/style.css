@@ -113,11 +113,15 @@ body {
     background-color: #ffffff;
 }
 
-.input:focus {
+.input:focus-visible {
+
     outline: none;
     border-color: #007bb5;
 }
-
+button: focus-visible 
+a:focus-visible outline: none;{
+    outline: 3px solid #121512;
+}
 .falt-rad {
     display: flex;
     gap: 12px;
