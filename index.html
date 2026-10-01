@@ -1,119 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Stadstrafiken</title>
-</head>
-<body>
-
-    <div class="topbar">
-        <div class="topbar-sok">
-            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-                <circle cx="11" cy="11" r="6.5"/>
-                <line x1="15.8" y1="15.8" x2="21" y2="21"/>
-            </svg>
-            <span>Sök</span>
+  </head>
+  <body>
+    <header>
+      <nav class="toppfalt">
+        <ul class="toppfalt-knappar">
+          <li class="knappar">
+            <a href="#" class="knappar-text">Privat</a>
+            <a href="#" class="knappar-text">Företag</a>
+          </li>
+          <li class="knappar">
+            <a href="#" class="knappar-text">English</a>
+            <a href="#" class="knappar-text">Teckenspråk</a>
+            <a href="#" class="knappar-text">Lättläst</a>
+            <a href="#" class="knappar-text">Logga in</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="topbar">
+        <button class="topbar-sok">
+          <svg
+            class="ikon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="6.5" />
+            <line x1="15.8" y1="15.8" x2="21" y2="21" />
+          </svg>
+          <span>Sök</span>
+        </button>
+        <div class="genvagar-topbar">
+          <a class="genvag-top" href="#"><strong>Reseplanering</strong></a>
+          <a class="genvag-top" href="#"><strong>Biljetter</strong></a>
+          <a class="genvag-top" href="#"><strong>Kundservice</strong></a>
+          <a class="genvag-top" href="#"><strong>Aktuellt</strong></a>
         </div>
-        <img src="img/logo.svg" class="logo">
-        <div class="topbar-meny">
-            <span>Meny</span>
-            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
-            </svg>
-        </div>
-    </div>
+        <img src="img/logo.svg" class="logo" alt="logga for hemsidan" />
+        <button class="topbar-meny">
+          <span>Meny</span>
+          <svg
+            class="ikon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </nav>
+    </header>
 
-    <div class="hero">
-        <img src="img/tunnelbana-stockholm-1-1.jpg" class="hero-bild">
+    <main>
+      <div class="hero">
+        <img
+          src="img/tunnelbana-stockholm-1-1.jpg"
+          class="hero-bild"
+          alt="bild på stockholms tunnelbana"
+        />
         <div class="flikar">
-            <div class="flik aktiv">Sök resa</div>
-            <div class="flik">Sök avgångar</div>
+          <button class="flik aktiv">Sök resa</button>
+          <button class="flik">Sök avgångar</button>
         </div>
-    </div>
+        <fieldset class="fields">
+          <form class="sokpanel">
+            <div class="sokrubrik">Vart vill du åka?</div>
 
-    <div class="sokpanel">
-        <div class="sokrubrik">Vart vill du åka?</div>
+            <div class="resa-rad">
+              <div class="falt">
+                <label for="from" class="etikett">Från</label>
+                <input
+                  type="text"
+                  class="input"
+                  id="from"
+                  autocomplete="street-address"
+                />
+              </div>
 
-        <div class="falt">
-            <div class="etikett">Från</div>
-            <input type="text" class="input">
-        </div>
+              <button
+                class="vaxla"
+                type="button"
+                aria-label="Byt plats på från och till"
+              >
+                ⇅
+              </button>
 
-        <div class="vaxla">⇅</div>
-
-        <div class="falt">
-            <div class="etikett">Till</div>
-            <input type="text" class="input">
-        </div>
-
-        <div class="falt-rad">
-            <div class="falt">
-                <div class="etikett">Datum</div>
-                <input type="text" class="input">
+              <div class="falt">
+                <label for="to" class="etikett">Till</label>
+                <input
+                  type="text"
+                  class="input"
+                  id="to"
+                  autocomplete="street-address"
+                />
+              </div>
             </div>
-            <div class="falt">
-                <div class="etikett">Tid</div>
-                <input type="text" class="input">
+            <div class="sok-actions">
+              <div class="falt-rad">
+                <div class="falt">
+                  <label for="date" class="etikett">Datum</label>
+                  <input type="date" class="input" id="date" />
+                </div>
+
+                <div class="falt">
+                  <label for="tid" class="etikett">Tid</label>
+                  <input type="time" class="input" id="tid" />
+                </div>
+              </div>
+
+              <div class="fel" role="alert">
+                Fyll i både avresehållplats och destination.
+              </div>
+              <br />
+
+              <button class="knapp" type="submit">Sök resa</button>
             </div>
+          </form>
+        </fieldset>
+      </div>
+
+      <article>
+        <div class="genvagar">
+          <a class="genvag">Reseplanering<span class="pil">→</span></a>
+          <a class="genvag">Biljetter<span class="pil">→</span></a>
+          <a class="genvag">Kundservice<span class="pil">→</span></a>
+          <a class="genvag">Aktuellt<span class="pil">→</span></a>
         </div>
+      </article>
 
-        <div class="fel"></div>
+      <section>
+        <div class="trafik">
+          <div class="trafikrubrik">Trafikläget just nu</div>
+          <div class="uppdaterad">Uppdaterad idag 13:26</div>
 
-        <div class="knapp">Sök resa</div>
-    </div>
-
-    <div class="genvagar">
-        <div class="genvag">Reseplanering<span class="pil">→</span></div>
-        <div class="genvag">Biljetter<span class="pil">→</span></div>
-        <div class="genvag">Kundservice<span class="pil">→</span></div>
-        <div class="genvag">Aktuellt<span class="pil">→</span></div>
-    </div>
-
-    <div class="trafik">
-        <div class="trafikrubrik">Trafikläget just nu</div>
-        <div class="uppdaterad">Uppdaterad idag 13:26</div>
-
-        <div class="linjekort">
+          <div class="linjekort">
             <span class="linjeikon tunnelbana"></span>
             <span class="linjenamn">Blå linjen</span>
             <span class="status ok"></span>
-        </div>
-        <div class="linjekort">
+            <span class="ok-text">Inga rapporterade störningar</span>
+          </div>
+          <div class="linjekort">
             <span class="linjeikon tunnelbana"></span>
             <span class="linjenamn">Röda linjen</span>
             <span class="status ok"></span>
-        </div>
-        <div class="linjekort">
+            <span class="ok-text">Inga rapporterade störningar</span>
+          </div>
+          <div class="linjekort">
             <span class="linjeikon tunnelbana"></span>
             <span class="linjenamn">Gröna linjen</span>
             <span class="status ok"></span>
-        </div>
-        <div class="linjekort">
+            <span class="ok-text">Inga rapporterade störningar</span>
+          </div>
+          <div class="linjekort">
             <span class="linjeikon pendel"></span>
             <span class="linjenamn">Pendeltåg</span>
             <span class="status varning"></span>
-        </div>
-        <div class="linjekort">
+            <span class="varning-text">Stora störningar</span>
+          </div>
+          <div class="linjekort">
             <span class="linjeikon sparvagn"></span>
             <span class="linjenamn">Spårvagn och lokalbana</span>
             <span class="status info"></span>
-        </div>
-        <div class="linjekort">
+            <span class="ok-text">Måttliga störningar</span>
+          </div>
+          <div class="linjekort">
             <span class="linjeikon buss"></span>
             <span class="linjenamn">Buss</span>
             <span class="status info"></span>
+            <span class="ok-text">Måttliga störningar</span>
+          </div>
         </div>
-    </div>
-
-    <div class="fot">
-        <div class="fot-lank">Om Stadstrafiken</div>
-        <div class="fot-lank">Kontakta oss</div>
-        <div class="fot-lank">Tillgänglighet</div>
-    </div>
-
-</body>
+      </section>
+    </main>
+    <footer>
+      <div class="fot">
+        <a href="#" class="fot-lank">Om Stadstrafiken</a>
+        <br />
+        <a href="#" class="fot-lank">Kontakta oss</a>
+        <br />
+        <a href="#" class="fot-lank">Tillgänglighet</a>
+      </div>
+    </footer>
+  </body>
 </html>
