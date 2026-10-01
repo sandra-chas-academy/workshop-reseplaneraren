@@ -121,7 +121,7 @@ section {
     font-family: inherit;
     font-size: 16px;
     padding: 13px 12px;
-    border: 1px solid #d8dde2;
+    border: 1px solid #6e6e6e;
     background-color: #ffffff;
 }
 
@@ -179,7 +179,7 @@ a:focus-visible,
 
 .genvagar {
     margin: 20px 16px;
-    border: 1px solid #e4e6e8;
+    border: 1px solid #6e6e6e;
 }
 
 .genvag {
@@ -188,7 +188,7 @@ a:focus-visible,
     justify-content: space-between;
     padding: 16px 14px;
     font-size: 16px;
-    border-bottom: 1px solid #e4e6e8;
+    border-bottom: 1px solid #6e6e6e;
     cursor: pointer;
 }
 
@@ -216,7 +216,7 @@ a:focus-visible,
 
 .uppdaterad {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #6e6e6e;
     margin-bottom: 14px;
 }
 
@@ -265,13 +265,13 @@ a:focus-visible,
     display: flex;
     flex-direction: row;
     gap:1rem;
-    border-top: 1px solid #e4e6e8;
+    border-top: 1px solid #6e6e6e;
     padding: 16px;
 }
 
 .fot-lank {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #6e6e6e;
     padding: 8px 0;
     cursor: pointer;
     text-decoration: none;
