@@ -10,17 +10,56 @@ body {
     color: #12151a;
     background-color: #ffffff;
 }
-
-/* --- Topbar --- */
-
-.topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header button{
+    border: none;
     background-color: #007bb5;
     color: #ffffff;
     padding: 14px 16px;
 }
+
+/* --- Topbar --- */
+
+/* top-header */
+
+.topbar {
+
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bb5;
+    color: #ffffff;
+    
+}
+
+.top-header-bg {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+
+.top-header-left ul, 
+.top-header-right ul {
+list-style: none;
+display: flex;
+flex-direction: row;
+gap: 1rem
+;
+    }
+
+.top-header-left a,
+.top-header-right a {
+text-decoration: none;
+color: white;
+    }
+    
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    } */
 
 .topbar-sok,
 .topbar-meny {
@@ -44,6 +83,10 @@ body {
 }
 
 /* --- Hero --- */
+
+section {
+    background-color: red
+}
 
 .hero {
     position: relative;
@@ -96,6 +139,7 @@ body {
 
 .falt {
     margin-bottom: 12px;
+
 }
 
 .etikett {
@@ -109,13 +153,16 @@ body {
     font-family: inherit;
     font-size: 16px;
     padding: 13px 12px;
-    border: 1px solid #d8dde2;
+    border: 1px solid #6e6e6e;
     background-color: #ffffff;
 }
 
-.input:focus {
-    outline: none;
-    border-color: #007bb5;
+button:focus-visible,
+a:focus-visible,
+.input:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 0px;
+    box-shadow: 0 0 0 3px #fff;
 }
 
 .falt-rad {
@@ -128,6 +175,7 @@ body {
 }
 
 .vaxla {
+    display: block;
     width: 36px;
     height: 36px;
     margin: 0 auto 12px;
@@ -138,6 +186,7 @@ body {
     line-height: 36px;
     text-align: center;
     cursor: pointer;
+    border-style: none;
 }
 
 .fel {
@@ -148,6 +197,7 @@ body {
 }
 
 .knapp {
+    border:none;
     background-color: #007bb5;
     color: #ffffff;
     font-size: 17px;
@@ -161,7 +211,7 @@ body {
 
 .genvagar {
     margin: 20px 16px;
-    border: 1px solid #e4e6e8;
+    border: 1px solid #6e6e6e;
 }
 
 .genvag {
@@ -170,7 +220,7 @@ body {
     justify-content: space-between;
     padding: 16px 14px;
     font-size: 16px;
-    border-bottom: 1px solid #e4e6e8;
+    border-bottom: 1px solid #6e6e6e;
     cursor: pointer;
 }
 
@@ -198,7 +248,7 @@ body {
 
 .uppdaterad {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #6e6e6e;
     margin-bottom: 14px;
 }
 
@@ -244,13 +294,30 @@ body {
 /* --- Fot --- */
 
 .fot {
-    border-top: 1px solid #e4e6e8;
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    border-top: 1px solid #6e6e6e;
     padding: 16px;
 }
 
 .fot-lank {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #6e6e6e;
     padding: 8px 0;
     cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* För desktop */
+
+@media (min-width: 1280px) {
+
+.topbar-meny{
+    display: none;
+}
+
+
+
 }
