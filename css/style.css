@@ -1,0 +1,397 @@
+• {.
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #12151A;
+    background-color: #FFFFFF;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* --- Topbar --- */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007BB5;
+    color: #FFFFFF;
+    padding: 14px 16px;
+}
+
+.topbar-sok,
+.topbar-meny {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: inherit;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.ikon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+}
+
+/* --- Hero --- */
+
+.hero {
+    position: relative;
+    background-color: #0E1620;
+}
+
+.hero-bild {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.flikar {
+    display: flex;
+    padding: 0 16px;
+    margin-top: -48px;
+    position: relative;
+}
+
+.flik {
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #007BB5;
+    color: #FFFFFF;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 0;
+}
+
+.flik.aktiv {
+    background-color: #F1F2F3;
+    color: #12151A;
+    text-decoration: underline;
+}
+
+/* --- Sökpanel --- */
+
+.sokpanel {
+    background-color: #F1F2F3;
+    padding: 20px 16px 24px;
+}
+
+.sokrubrik {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.falt {
+    margin-bottom: 12px;
+}
+
+.etikett {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 13px 12px;
+    border: 1px solid #D8DDE2;
+    background-color: #FFFFFF;
+}
+
+.input:focus-visible {
+    outline: 3px solid #12151A;
+    border-color: #007BB5;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #12151A;
+    outline-offset: 2px;
+}
+
+.falt-rad {
+    display: flex;
+    gap: 12px;
+}
+
+.falt-rad .falt {
+    flex: 1 1 0;
+}
+
+.vaxla {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background-color: #007BB5;
+    color: #FFFFFF;
+    font-size: 17px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+}
+
+.fel {
+    display: none;
+    height: 3px;
+    background-color: #C62828;
+    margin-bottom: 12px;
+}
+
+.knapp {
+    background-color: #007BB5;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px;
+    cursor: pointer;
+    border: 0;
+}
+
+/* --- Genvägar --- */
+
+.genvagar {
+    margin: 20px 16px;
+    border: 1px solid #E4E6E8;
+}
+
+.genvag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #E4E6E8;
+    cursor: pointer;
+    color: #12151A;
+    text-decoration: none;
+}
+
+.genvag:last-child {
+    border-bottom: 0;
+}
+
+.pil {
+    color: #007BB5;
+    font-size: 18px;
+}
+
+/* --- Trafikläget --- */
+
+.trafik {
+    padding: 8px 16px 24px;
+}
+
+.trafikrubrik {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.uppdaterad {
+    font-size: 14px;
+    color: #12151A;
+    margin-bottom: 14px;
+}
+
+.linjekort {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #F1F2F3;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+
+.linjeikon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    border-radius: 4px;
+}
+
+.tunnelbana {
+    background-color: #12151A;
+}
+
+.pendel {
+    background-color: #007A5E;
+}
+
+.sparvagn {
+    background-color: #6A3F9E;
+}
+
+.buss {
+    background-color: #C8102E;
+}
+
+.linjenamn {
+    flex: 1 1 auto;
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    border-radius: 50%;
+}
+
+.status-text {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status.ok {
+    background-color: #1B7A3D;
+}
+
+.status.varning {
+    background-color: #C77700;
+}
+
+.status.info {
+    background-color: #4C5157;
+}
+
+/* --- Footer --- */
+
+.fot {
+    border-top: 1px solid #12151A;
+    padding: 16px;
+}
+
+.fot-lank {
+    display: block;
+    font-size: 14px;
+    color: #12151A;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+/* --- Desktop --- */
+
+@media (min-width: 768px) {
+    .desktop-topbar {
+        display: flex;
+    }
+}
+    .desktop-nav {
+        display: flex;
+        gap: 32px;
+    }
+
+    .topbar-meny {
+        display: none;
+    }
+
+    .hero-bild {
+        height: 230px;
+    }
+
+    .flikar {
+        max-width: 1200px;
+        margin: -42px auto 0;
+        padding: 0;
+    }
+
+    .sokpanel {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+
+    .sokpanel form {
+        display: grid;
+        grid-template-columns: 1fr 50px 1fr;
+        gap: 12px;
+        align-items: end;
+    }
+
+    .sokpanel form > .falt:first-of-type {
+        grid-column: 1;
+    }
+
+    .vaxla {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        grid-column: 2;
+    }
+
+    .sokpanel form > .falt:nth-of-type(2) {
+        grid-column: 3;
+    }
+
+    .falt-rad {
+        grid-column: 1 / 3;
+    }
+
+    .knapp {
+        grid-column: 3;
+    }
+
+    .genvagar {
+        display: none;
+    }
+
+    .trafik {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .trafikrubrik,
+    .uppdaterad {
+        grid-column: 1 / 3;
+    }
+
+    .fot {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+}
