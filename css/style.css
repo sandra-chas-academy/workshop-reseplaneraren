@@ -312,27 +312,12 @@ a:focus-visible {
 }
 
 /* --- Desktop --- */
-.desktop-topbar {
-    display: none;
-}
+
 @media (min-width: 768px) {
-.desktop-topbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #12151A;
-    color: #FFFFFF;
-    padding: 8px 35px;
-    font-size: 12px;
-}
-
-.desktop-topbar div {
-    display: flex;
-    gap: 24px;
-}
-    .topbar {
-        padding: 14px 35px;
+    .desktop-topbar {
+        display: flex;
     }
-
+}
     .desktop-nav {
         display: flex;
         gap: 32px;
