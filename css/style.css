@@ -126,6 +126,12 @@ a{
     border-color: #007bb5;
 }
 
+:focus-visible {
+    outline: 2px solid #ffcc00;
+    border-radius: 4px;
+    outline-offset: 2px;
+}
+
 .falt-rad {
     display: flex;
     gap: 12px;
