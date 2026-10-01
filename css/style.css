@@ -33,7 +33,7 @@ body {
 }
 
 .topbar-meny {
-    
+
 }
 
 .ikon {
@@ -117,8 +117,9 @@ body {
     background-color: #ffffff;
 }
 
-.input:focus {
-    outline: none;
+
+.focus:focus-visible {
+    outline: .1rem solid black;
     border-color: #007bb5;
 }
 
