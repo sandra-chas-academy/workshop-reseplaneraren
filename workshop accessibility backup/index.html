@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Stadstrafiken</title>
+</head>
+<body>
+
+    <div class="topbar"> 
+        <button type="button" onclick="location.href='#'" class="topbar-sok"> <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="6.5"/>
+                <line x1="15.8" y1="15.8" x2="21" y2="21"/>
+            </svg>
+            <span>Sök</span>
+
+        </button>
+        <img src="img/logo.svg" alt="Logotyp på stadstrafiken" class="logo"> <!-- La till beskrivande text till logotypen-->
+        <button type="button" onclick="location.href='#1'" class="topbar-meny"> <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+            <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>  
+            <span>Meny</span>          
+        </button>
+    </div>
+
+    <div class="hero">
+        <img src="img/tunnelbana-stockholm-1-1.jpg" alt="Gammal backgrundsbild på stockholms tunnelbana" class="hero-bild" > <!-- La till beskrivande text till hero-->
+        <div class="flikar"> 
+            <button type="button" onclick="location.href='#2'" class="flik aktiv"> <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+                Sök resa
+            </button>
+             
+            <button type="button" onclick="location.href='#3'" class="flik"><!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+                Sök avgångar                
+            </button> 
+        </div>
+    </div>
+
+    <form class="sokpanel"> <!-- Ändrar div till <form>-->
+        <Header class="sokrubrik">Vart vill du åka?</Header>
+
+        <div class="falt">
+            <label for="falt" class="etikett">Från</label> <!--Ändrar div til label, använder divs class som label-->
+            <input type="adress" autocomplete="street-address" id="falt" class="input"> <!-- La till automcomplete, ger förslag på tidigare skrivna adresser -->
+        </div>
+
+        <div class="vaxla">⇅</div>
+
+        <div class="falt">
+            <label for="falt" class="etikett">Till</label>
+            <input id=type="text" autocomplete="street-adress" class="input"> <!-- La till automcomplete, ger förslag på tidigare skrivna adresser -->
+        </div>
+
+        <div class="falt-rad">
+            <div class="falt">
+                <label for="datum" class="etikett">Datum</label>
+                <input id="datum" type="date" class="input"> <!-- Ändrade type från text till date-->
+            </div>
+            <div class="falt">
+                <label for="tid" class="etikett">Tid</label>
+                <input id="tid" type="time" class="input"> <!-- Ändrade type från text till time-->
+            </div>
+        </div>
+
+        <div class="fel"></div>
+
+        <button type="button" onclick="location.href='#4'" style="text-decoration:none; " class="knapp">Sök resa</button>  <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+    </form>
+
+    <div class="genvagar">
+        <!--
+        <div class="genvag">Reseplanering <span class="pil">→</span></div>
+        <div class="genvag">Biljetter<span class="pil">→</span></div>
+        <div class="genvag">Kundservice<span class="pil">→</span></div>
+        <div class="genvag">Aktuellt<span class="pil">→</span></div>-->
+
+        <!--Gör om alla div till buttons-->
+
+
+        </button>
+        <button type="button" onclick="location.href='#5'" class="genvag"> <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+            <span class="pil">→</span>
+            Reseplanering
+        </button>
+
+        <button type="button" onclick="location.href='#6'" class="genvag"> <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+            <span class="pil">→</span>
+            Biljetter
+        </button>
+
+        <button type="button" onclick="location.href='#7'" class="genvag"> <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+            <span class="pil">→</span>
+            Kundservice
+
+        </button>
+        <button type="button" onclick="location.href='#8'" class="genvag"> <!--Ändrar div till button, och inbäddar länk direkt till buttom-->
+            <span class="pil">→</span>
+            Aktuellt
+
+
+        </button>
+
+    
+    </div>
+
+    <div class="trafik">
+        <div class="trafikrubrik">Trafikläget just nu</div>
+        <div class="uppdaterad">Uppdaterad idag 13:26</div>
+
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Blå linjen</span>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Röda linjen</span>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon tunnelbana"></span>
+            <span class="linjenamn">Gröna linjen</span>
+            <span class="status ok"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon pendel"></span>
+            <span class="linjenamn">Pendeltåg</span>
+            <span class="status varning"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon sparvagn"></span>
+            <span class="linjenamn">Spårvagn och lokalbana</span>
+            <span class="status info"></span>
+        </div>
+        <div class="linjekort">
+            <span class="linjeikon buss"></span>
+            <span class="linjenamn">Buss</span>
+            <span class="status info"></span>
+        </div>
+    </div>
+
+    <div class="fot">
+        <div class="fot-lank">Om Stadstrafiken</div>
+        <div class="fot-lank">Kontakta oss</div>
+        <div class="fot-lank">Tillgänglighet</div>
+    </div>
+
+</body>
+</html>

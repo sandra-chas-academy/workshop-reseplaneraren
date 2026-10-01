@@ -11,6 +11,7 @@ body {
     background-color: #ffffff;
 }
 
+
 /* --- Topbar --- */
 
 .topbar {
@@ -22,14 +23,35 @@ body {
     padding: 14px 16px;
 }
 
+
+
 .topbar-sok,
 .topbar-meny {
+    /* Nollställer webbläsarnes standardutseende*/ 
+    /*background: transparent;
+    border:none;
+    padding:0;
+    font:inherit;
+    color:inherit;*/
+
+    all:unset; /*Alternativ sätt*/ 
+
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    /*Sen lägga tillbaka de css style som kom innan vilke överrider 
+    kommandot all:unset och lägger in sin egna på grund av css cascade*/
+    
+    
+    
+}
+
+.topbar-sok:focus-visible,
+.topbar-meny:focus-visible{
+    outline:2px solid black;
 }
 
 .ikon {
@@ -63,8 +85,13 @@ body {
     margin-top: -48px;
     position: relative;
 }
+.flikar:focus-visible{
+    outline:2px solid black;
+}
 
 .flik {
+    all:unset;
+
     padding: 14px 40px;
     font-size: 16px;
     font-weight: 700;
@@ -75,9 +102,16 @@ body {
 }
 
 .flik.aktiv {
+    
     background-color: #f1f2f3;
     color: #12151a;
     text-decoration: underline;
+}
+
+.flik:focus-visible,
+.flik-aktiv:focus-visible{
+    outline:2px solid black;
+
 }
 
 /* --- Sökpanel --- */
@@ -109,7 +143,7 @@ body {
     font-family: inherit;
     font-size: 16px;
     padding: 13px 12px;
-    border: 1px solid #d8dde2;
+    border: 1px solid #637788; /* Ändrade kontrasten för att uppfylla WCAG*/
     background-color: #ffffff;
 }
 
@@ -148,6 +182,8 @@ body {
 }
 
 .knapp {
+    all:unset;
+
     background-color: #007bb5;
     color: #ffffff;
     font-size: 17px;
@@ -155,6 +191,11 @@ body {
     text-align: center;
     padding: 14px;
     cursor: pointer;
+    border:1px;
+}
+
+.knapp:focus-visible{
+    outline:2px solid black;
 }
 
 /* --- Genvägar --- */
@@ -165,6 +206,9 @@ body {
 }
 
 .genvag {
+    all:unset;
+    background-color: inherit;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -176,6 +220,10 @@ body {
 
 .genvag:last-child {
     border-bottom: 0;
+}
+
+.genvag:focus-visible{
+    outline:2px solid black;
 }
 
 .pil {
@@ -198,7 +246,7 @@ body {
 
 .uppdaterad {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #757575; /*Ökar kontrasten för att fylla WCAG  */
     margin-bottom: 14px;
 }
 
@@ -250,7 +298,8 @@ body {
 
 .fot-lank {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #757575; /*Ökar kontrasten för att fylla WCAG  */
     padding: 8px 0;
     cursor: pointer;
 }
+
