@@ -2,7 +2,7 @@
 
 Kryssa bara i det ni faktiskt gjort.
 
-- [ ] A11Y-1 Formuläret är inget formulär
+- [x] A11Y-1 Formuläret är inget formulär
 - [ ] A11Y-2 Knappar, flikar och länkar är div-ar
 - [ ] A11Y-3 Fokusmarkeringen är bortsläckt
 - [ ] A11Y-4 Felmeddelandet saknar text
