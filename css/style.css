@@ -10,6 +10,10 @@ body {
     color: #12151a;
     background-color: #ffffff;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 /* --- Topbar --- */
 
@@ -72,12 +76,16 @@ body {
     color: #ffffff;
     cursor: pointer;
     white-space: nowrap;
+
+    border: none;
 }
 
 .flik.aktiv {
     background-color: #f1f2f3;
     color: #12151a;
     text-decoration: underline;
+
+    border: none;
 }
 
 /* --- Sökpanel --- */
@@ -138,6 +146,10 @@ body {
     line-height: 36px;
     text-align: center;
     cursor: pointer;
+
+    border: none;
+    display: block;
+
 }
 
 .fel {
@@ -155,6 +167,8 @@ body {
     text-align: center;
     padding: 14px;
     cursor: pointer;
+    
+    border: none;
 }
 
 /* --- Genvägar --- */
@@ -244,6 +258,9 @@ body {
 /* --- Fot --- */
 
 .fot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-top: 1px solid #e4e6e8;
     padding: 16px;
 }
