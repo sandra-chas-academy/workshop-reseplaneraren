@@ -9,6 +9,10 @@ body {
   font-size: 16px;
   color: #12151a;
   background-color: #ffffff;
+
+  button {
+    border: none;
+  }
 }
 
 /* --- Topbar --- */
@@ -30,6 +34,15 @@ body {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  display: block;
+}
+
+.topbar-sok {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  background: transparent;
+  order: -1;
 }
 
 .ikon {
@@ -52,6 +65,7 @@ body {
 
 .hero-bild {
   display: block;
+  object-position: bottom;
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -65,6 +79,7 @@ body {
 }
 
 .flik {
+  border: none;
   padding: 14px 40px;
   font-size: 16px;
   font-weight: 700;
@@ -81,6 +96,14 @@ body {
 }
 
 /* --- Sökpanel --- */
+
+.destination-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
 
 .sokpanel {
   background-color: #f1f2f3;
@@ -132,10 +155,14 @@ a:focus-visible {
   flex: 1 1 0;
 }
 
+.falt {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
 .vaxla {
   width: 36px;
   height: 36px;
-  margin: 0 auto 12px;
   border-radius: 50%;
   background-color: #007bb5;
   color: #ffffff;
@@ -162,6 +189,10 @@ a:focus-visible {
 }
 
 /* --- Genvägar --- */
+
+.genvagar-top {
+  display: none;
+}
 
 .genvagar {
   margin: 20px 16px;
@@ -190,6 +221,7 @@ a:focus-visible {
 /* --- Trafikläget --- */
 
 .trafik {
+  margin-inline: 40px;
   padding: 8px 16px 24px;
 }
 
@@ -271,4 +303,91 @@ a:focus-visible {
   color: #6e6e6e;
   padding: 8px 0;
   cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: grid;
+  }
+
+  .hero,
+  .form-section {
+    grid-area: 1/1;
+  }
+
+  .form-section {
+    padding: 230px 0 40px 0;
+    position: relative;
+    margin-inline: 40px;
+  }
+
+  .hero {
+    img {
+      position: absolute;
+      height: 100%;
+    }
+  }
+
+  .flikar {
+    justify-content: center;
+  }
+
+  .genvagar {
+    display: none;
+  }
+
+  .genvag {
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    font-weight: 700;
+  }
+
+  .genvagar-top {
+    display: flex;
+  }
+
+  .topbar-meny {
+    display: none;
+  }
+
+  .topbar-sok {
+    order: 2;
+  }
+
+  .logo-section {
+    display: flex;
+  }
+
+  .destination-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .falt {
+    margin-bottom: 12px;
+  }
+
+  .vaxla {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .date-picker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .fel {
+      margin-bottom: 0;
+    }
+  }
 }
