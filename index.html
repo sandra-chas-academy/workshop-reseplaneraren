@@ -8,25 +8,26 @@
 </head>
 <body>
 
-    <div class="topbar">
-        <div class="topbar-sok">
+    <header class="topbar">
+        <nav class="topbar-sok">
             <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
                 <circle cx="11" cy="11" r="6.5"/>
                 <line x1="15.8" y1="15.8" x2="21" y2="21"/>
             </svg>
             <a href="#">Sök</a>
-        </div>
+        </nav>
         <img src="img/logo.svg" class="logo">
-        <div class="topbar-meny">
+        <nav class="topbar-meny">
             <a href="#">Meny</a>
             <svg class="ikon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
                 <line x1="3" y1="6" x2="21" y2="6"/>
                 <line x1="3" y1="12" x2="21" y2="12"/>
                 <line x1="3" y1="18" x2="21" y2="18"/>
             </svg>
-        </div>
-    </div>
+        </nav>
+    </header>
 
+<main>
     <div class="hero">
         <img src="img/tunnelbana-stockholm-1-1.jpg" class="hero-bild">
         <div class="flikar">
@@ -36,7 +37,7 @@
     </div>
 
     <div class="sokpanel">
-        <div class="sokrubrik">Vart vill du åka?</div>
+        <h1 class="sokrubrik">Vart vill du åka?</h1>
         <form>
         <div class="falt">
             <label for="fran" class="etikett">Från</label>
@@ -75,46 +76,47 @@
     </div>
 
     <div class="trafik">
-        <div class="trafikrubrik">Trafikläget just nu</div>
-        <div class="uppdaterad">Uppdaterad idag 13:26</div>
+        <h2 class="trafikrubrik">Trafikläget just nu</h2>
+        <p class="uppdaterad">Uppdaterad idag 13:26</p>
 
         <div class="linjekort">
             <span class="linjeikon tunnelbana"></span>
-            <span class="linjenamn">Blå linjen</span>
+            <h3 class="linjenamn">Blå linjen</h3>
             <span class="status ok"></span>
         </div>
         <div class="linjekort">
             <span class="linjeikon tunnelbana"></span>
-            <span class="linjenamn">Röda linjen</span>
+            <h3 class="linjenamn">Röda linjen</h3>
             <span class="status ok"></span>
         </div>
         <div class="linjekort">
             <span class="linjeikon tunnelbana"></span>
-            <span class="linjenamn">Gröna linjen</span>
+            <h3 class="linjenamn">Gröna linjen</h3>
             <span class="status ok"></span>
         </div>
         <div class="linjekort">
             <span class="linjeikon pendel"></span>
-            <span class="linjenamn">Pendeltåg</span>
+            <h3 class="linjenamn">Pendeltåg</h3>
             <span class="status varning"></span>
         </div>
         <div class="linjekort">
             <span class="linjeikon sparvagn"></span>
-            <span class="linjenamn">Spårvagn och lokalbana</span>
+            <h3 class="linjenamn">Spårvagn och lokalbana</h3>
             <span class="status info"></span>
         </div>
         <div class="linjekort">
             <span class="linjeikon buss"></span>
-            <span class="linjenamn">Buss</span>
+            <h3 class="linjenamn">Buss</h3>
             <span class="status info"></span>
         </div>
     </div>
+</main>
 
-    <div class="fot">
+    <footer class="fot">
         <a href="#" class="fot-lank">Om Stadstrafiken</a>
         <a href="#" class="fot-lank">Kontakta oss</a>
         <a href="#" class="fot-lank">Tillgänglighet</a>
-    </div>
+    </footer>
 
 </body>
 </html>
