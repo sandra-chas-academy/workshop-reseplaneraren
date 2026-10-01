@@ -109,12 +109,13 @@ body {
     font-family: inherit;
     font-size: 16px;
     padding: 13px 12px;
-    border: 1px solid #d8dde2;
+    border: 1px solid #7a979f;
     background-color: #ffffff;
 }
 
-.input:focus {
-    outline: none;
+
+.focus:focus-visible {
+    outline: .1rem solid black;
     border-color: #007bb5;
 }
 
@@ -142,9 +143,10 @@ body {
 
 .fel {
     display: none;
-    height: 3px;
+    height: 20px;
     background-color: #c62828;
     margin-bottom: 12px;
+    color: yellow;
 }
 
 .knapp {
@@ -198,7 +200,7 @@ body {
 
 .uppdaterad {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #757575;
     margin-bottom: 14px;
 }
 
@@ -250,7 +252,7 @@ body {
 
 .fot-lank {
     font-size: 14px;
-    color: #9a9a9a;
+    color: #757575;
     padding: 8px 0;
     cursor: pointer;
 }

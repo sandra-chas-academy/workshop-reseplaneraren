@@ -2,16 +2,16 @@
 
 Kryssa bara i det ni faktiskt gjort.
 
-- [ ] A11Y-1 Formuläret är inget formulär
-- [ ] A11Y-2 Knappar, flikar och länkar är div-ar
-- [ ] A11Y-3 Fokusmarkeringen är bortsläckt
-- [ ] A11Y-4 Felmeddelandet saknar text
-- [ ] A11Y-5 Fel type på fälten
-- [ ] A11Y-6 Rubriker och landmärken saknas
-- [ ] A11Y-7 Kontrast under kraven
-- [ ] A11Y-8 Störningsläget syns bara som färgad prick
-- [ ] A11Y-9 Bilderna saknar alt
-- [ ] A11Y-10 Fel språk i html
+- [x] A11Y-1 Formuläret är inget formulär
+- [x] A11Y-2 Knappar, flikar och länkar är div-ar
+- [x] A11Y-3 Fokusmarkeringen är bortsläckt
+- [x] A11Y-4 Felmeddelandet saknar text
+- [x] A11Y-5 Fel type på fälten
+- [x] A11Y-6 Rubriker och landmärken saknas
+- [x] A11Y-7 Kontrast under kraven
+- [x] A11Y-8 Störningsläget syns bara som färgad prick
+- [x] A11Y-9 Bilderna saknar alt
+- [x] A11Y-10 Fel språk i html
 - [ ] RWD-1 Desktopvyn finns inte
 - [ ] RWD-2 Allt är satt i px
 - [ ] RWD-3 Flikraden kapas vid 320 px
@@ -27,9 +27,9 @@ Kort, en eller två meningar per ticket. Skriv gärna varför, inte bara vad.
 |---|---|---|
 | Lighthouse, Accessibility | | |
 | Fel i validator.w3.org | | |
-| Kontrast, "Uppdaterad idag" | 2,81:1 | |
-| Kontrast, sidfotslänkar | 2,81:1 | |
-| Kontrast, fältram | 1,37:1 | |
+| Kontrast, "Uppdaterad idag" | 2,81:1 | 4,6:1 |
+| Kontrast, sidfotslänkar | 2,81:1 | 4,6:1 |
+| Kontrast, fältram | 1,37:1 | 3:1 |
 
 ## Brytpunkter
 
