@@ -10,6 +10,12 @@ body {
     color: #12151a;
     background-color: #ffffff;
 }
+header button{
+    border: none;
+    background-color: #007bb5;
+    color: #ffffff;
+    padding: 14px 16px;
+}
 
 /* --- Topbar --- */
 
@@ -44,6 +50,10 @@ body {
 }
 
 /* --- Hero --- */
+
+section {
+    background-color: red
+}
 
 .hero {
     position: relative;
@@ -96,6 +106,7 @@ body {
 
 .falt {
     margin-bottom: 12px;
+    
 }
 
 .etikett {
@@ -128,6 +139,7 @@ body {
 }
 
 .vaxla {
+    display: block;
     width: 36px;
     height: 36px;
     margin: 0 auto 12px;
@@ -138,6 +150,7 @@ body {
     line-height: 36px;
     text-align: center;
     cursor: pointer;
+    border-style: none;
 }
 
 .fel {
@@ -148,6 +161,7 @@ body {
 }
 
 .knapp {
+    border:none;
     background-color: #007bb5;
     color: #ffffff;
     font-size: 17px;
@@ -244,6 +258,9 @@ body {
 /* --- Fot --- */
 
 .fot {
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
     border-top: 1px solid #e4e6e8;
     padding: 16px;
 }
@@ -253,4 +270,5 @@ body {
     color: #9a9a9a;
     padding: 8px 0;
     cursor: pointer;
+    text-decoration: none;
 }
